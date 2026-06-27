@@ -169,6 +169,67 @@ body {
   background-size: 20px 20px;
 }
 
+/* Paper texture overlay (product detail) */
+.paper-texture-overlay {
+  background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.4;
+  z-index: 0;
+}
+
+/* Content card glass background */
+.content-card-bg {
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+}
+
+/* Sketch dashed border */
+.sketch-border {
+  border: 2px dashed #717783;
+  border-radius: 24px;
+}
+
+/* Wonky rotation variations */
+.wonky-rotation {
+  transform: rotate(-1.5deg);
+}
+.wonky-rotation-alt {
+  transform: rotate(2deg);
+}
+
+/* Crayon button shadow */
+.crayon-button-shadow {
+  box-shadow: 0 4px 0 0 #004883;
+}
+.crayon-button-shadow:active {
+  box-shadow: 0 0 0 0 #004883;
+  transform: translateY(4px);
+}
+
+/* Bouncy hover for product detail */
+.bouncy-hover-detail:hover {
+  transform: scale(1.05) rotate(1deg);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Hand-drawn star clip path */
+.hand-drawn-star {
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+}
+
 /* Full page background overlay */
 body::before {
   content: "";
