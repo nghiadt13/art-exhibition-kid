@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const relatedWorks = [
   {
     image:
@@ -34,15 +36,15 @@ export default function RelatedWorks() {
             Những ước mơ khác
           </h2>
         </div>
-        <a
+        <Link
           className="content-card-bg px-6 py-4 rounded-full text-primary font-bold hover:underline flex items-center gap-1 group shadow-sm"
-          href="#"
+          href="/gallery"
         >
           Xem tất cả
           <span className="material-symbols-outlined transition-transform group-hover:translate-x-1">
             arrow_forward
           </span>
-        </a>
+        </Link>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

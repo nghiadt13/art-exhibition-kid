@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function HeroSection() {
   return (
     <header className="relative pt-32 pb-20 overflow-hidden scribble-bg">
@@ -22,12 +24,18 @@ export default function HeroSection() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4">
-          <button className="bg-primary text-on-primary px-10 py-4 rounded-full font-body text-lg font-semibold button-3d bouncy-hover">
+          <Link
+            href="/gallery"
+            className="bg-primary text-on-primary px-10 py-4 rounded-full font-body text-lg font-semibold button-3d bouncy-hover flex items-center justify-center"
+          >
             Khám phá triển lãm
-          </button>
-          <button className="secondary-crayon-btn text-primary px-10 py-4 rounded-full font-body text-lg font-semibold bouncy-hover bg-surface/50 backdrop-blur-sm">
+          </Link>
+          <Link
+            href="/#about"
+            className="secondary-crayon-btn text-primary px-10 py-4 rounded-full font-body text-lg font-semibold bouncy-hover bg-surface/50 backdrop-blur-sm flex items-center justify-center"
+          >
             Tìm hiểu dự án
-          </button>
+          </Link>
         </div>
       </div>
 

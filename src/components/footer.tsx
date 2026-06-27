@@ -1,7 +1,9 @@
+import Link from "next/link";
+
 const quickLinks = [
-  { label: "Về dự án", href: "#" },
-  { label: "Phòng tranh", href: "#" },
-  { label: "Góp sức", href: "#" },
+  { label: "Về dự án", href: "/#about" },
+  { label: "Phòng tranh", href: "/gallery" },
+  { label: "Góp sức", href: "/#volunteer" },
 ];
 
 const infoLinks = [
@@ -23,12 +25,12 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-start gap-6 mb-12">
           {/* Brand */}
           <div className="max-w-xs">
-            <a
+            <Link
               className="text-headline-lg font-headline text-primary mb-4 block text-3xl font-bold"
-              href="#"
+              href="/"
             >
               Điều Em Muốn
-            </a>
+            </Link>
             <p className="text-on-surface-variant text-base">
               Triển lãm nghệ thuật nhí thiện nguyện lớn nhất Việt Nam. Kết nối
               trái tim qua hội họa.
@@ -40,25 +42,25 @@ export default function Footer() {
             <div className="flex flex-col gap-3">
               <h4 className="font-bold text-tertiary">Liên kết nhanh</h4>
               {quickLinks.map((link) => (
-                <a
+                <Link
                   key={link.label}
                   className="text-on-surface-variant hover:text-primary transition-all duration-300 ease-in-out underline decoration-dashed decoration-2 underline-offset-4"
                   href={link.href}
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </div>
             <div className="flex flex-col gap-3">
               <h4 className="font-bold text-tertiary">Thông tin</h4>
               {infoLinks.map((link) => (
-                <a
+                <Link
                   key={link.label}
                   className="text-on-surface-variant hover:text-primary transition-all duration-300 ease-in-out underline decoration-dashed decoration-2 underline-offset-4"
                   href={link.href}
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
