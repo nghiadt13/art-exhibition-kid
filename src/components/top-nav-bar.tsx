@@ -22,9 +22,9 @@ export default function TopNavBar() {
           href="/"
         >
           <img
-            src="/logo.jpg"
+            src="/logo.png"
             alt="Điều Em Muốn"
-            className="h-14 w-auto object-contain"
+            className="h-20 md:h-24 w-auto object-contain py-1"
           />
         </Link>
 
