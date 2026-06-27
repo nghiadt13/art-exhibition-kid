@@ -39,7 +39,7 @@ export default function Footer() {
               <p className="flex items-center gap-2">
                 <span className="material-symbols-outlined text-base text-secondary">public</span>
                 <span>Fanpage:</span>
-                <a href="https://www.facebook.com/profile.php?id=61561570774351" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors font-semibold">Điều Em Muốn</a>
+                <a href="https://www.facebook.com/profile.php?id=61590436748725&locale=vi_VN" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors font-semibold">Điều Em Muốn</a>
               </p>
               <p className="flex items-center gap-2">
                 <span className="material-symbols-outlined text-base text-secondary">video_library</span>
@@ -48,10 +48,6 @@ export default function Footer() {
               </p>
             </div>
           </div>
-        </div>
-
-        <div className="pt-8 border-t border-outline-variant text-center text-on-surface-variant text-sm">
-          &copy; 2024 Điều Em Muốn - Triển lãm nghệ thuật nhí thiện nguyện
         </div>
       </div>
     </footer>
