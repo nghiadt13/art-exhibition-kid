@@ -48,7 +48,7 @@ export default function ArtistsView() {
             Hồ Sơ Họa Sĩ Nhí
           </h1>
           <p className="text-xl text-on-surface-variant max-w-2xl mx-auto italic">
-            &ldquo;Lắng nghe câu chuyện cuộc sống và những ước mơ ẩn sau mỗi bức tranh đầy sắc màu của các em nhỏ vùng cao.&rdquo;
+            &ldquo;Lắng nghe câu chuyện cuộc sống và những ước mơ ẩn sau mỗi bức tranh đầy sắc màu của các em nhỏ .&rdquo;
           </p>
         </div>
 

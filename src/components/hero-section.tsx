@@ -21,6 +21,13 @@ export default function HeroSection() {
     <header className="relative pt-24 pb-20 overflow-hidden scribble-bg">
       {/* Infinite Marquee Artworks */}
       <div className="w-full overflow-hidden py-6 relative z-10 mb-6">
+        {/* Marquee Title */}
+        <div className="text-center mb-6">
+          <span className="bg-primary/10 text-primary px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
+            Tranh của các em
+          </span>
+        </div>
+
         <div className="absolute top-0 bottom-0 left-0 w-24 bg-gradient-to-r from-background to-transparent z-20 pointer-events-none" />
         <div className="absolute top-0 bottom-0 right-0 w-24 bg-gradient-to-l from-background to-transparent z-20 pointer-events-none" />
 
@@ -57,9 +64,9 @@ export default function HeroSection() {
         </h1>
 
         <p className="font-body text-[18px] leading-[1.6] text-on-surface-variant max-w-2xl mb-10 bg-surface/40 backdrop-blur-sm rounded-xl p-4 md:bg-transparent md:p-0">
-          Mỗi bức tranh là một lời nhắn nhủ, một khát khao của trẻ em vùng cao.
-          Hãy cùng chúng tôi biến những điều em muốn thành hiện thực thông qua
-          nghệ thuật.
+          Mỗi bức tranh là một lời nhắn nhủ, một khát khao của những em nhỏ. Hãy
+          cùng chúng tôi biến những điều em muốn thành hiện thực thông qua nghệ
+          thuật.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4">

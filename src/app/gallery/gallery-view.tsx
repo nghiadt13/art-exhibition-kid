@@ -64,12 +64,6 @@ export default function GalleryView() {
           ))}
         </div>
 
-        <div className="mt-16 text-center">
-          <button className="bg-surface-container-lowest text-primary border-2 border-primary px-10 py-4 rounded-full font-bold hover:bg-primary hover:text-on-primary transition-all shadow-sm button-3d">
-            Xem thêm tác phẩm
-          </button>
-        </div>
-
       </main>
 
       <Footer />
