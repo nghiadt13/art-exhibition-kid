@@ -17,7 +17,7 @@ export default function TopNavBar() {
       <div className="flex justify-between items-center w-full h-20">
         {/* Logo - far left */}
         <a
-          className="text-headline-lg font-headline font-extrabold text-primary tracking-tight flex items-center gap-2 pl-4 md:pl-6"
+          className="text-headline-lg font-headline font-extrabold text-primary tracking-tight flex items-center gap-2 pl-6 md:pl-12"
           href="#"
         >
           <span
@@ -30,7 +30,7 @@ export default function TopNavBar() {
         </a>
 
         {/* Desktop Nav - far right */}
-        <div className="hidden md:flex items-center gap-8 pr-4 md:pr-6">
+        <div className="hidden md:flex items-center gap-8 pr-6 md:pr-12">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -47,7 +47,7 @@ export default function TopNavBar() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-primary pr-4"
+          className="md:hidden text-primary pr-6 md:pr-12"
           onClick={() => setMobileOpen(!mobileOpen)}
         >
           <span className="material-symbols-outlined text-3xl">menu</span>
