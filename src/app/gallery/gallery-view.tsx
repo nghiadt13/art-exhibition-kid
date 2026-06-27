@@ -22,28 +22,7 @@ export default function GalleryView() {
           </p>
         </div>
 
-        {/* Filter Bar */}
-        <div className="bg-surface-container-lowest/90 backdrop-blur-sm p-6 rounded-3xl shadow-sm mb-12 flex flex-wrap gap-4 items-center justify-between border border-outline-variant/30">
-          <div className="flex gap-4 items-center">
-            <span className="text-sm font-bold text-outline uppercase tracking-wider">
-              Lọc theo:
-            </span>
-            <select className="bg-surface-container border-none rounded-xl px-4 py-2 text-on-surface-variant focus:ring-2 focus:ring-primary outline-none text-sm font-semibold">
-              <option>Độ tuổi</option>
-            </select>
-            <select className="bg-surface-container border-none rounded-xl px-4 py-2 text-on-surface-variant focus:ring-2 focus:ring-primary outline-none text-sm font-semibold">
-              <option>Chủ đề</option>
-            </select>
-          </div>
-          <div className="flex bg-surface-container p-1 rounded-xl">
-            <button className="p-2 bg-surface-container-lowest rounded-lg shadow-sm text-primary flex items-center">
-              <span className="material-symbols-outlined text-xl">grid_view</span>
-            </button>
-            <button className="p-2 text-outline hover:text-on-surface-variant flex items-center">
-              <span className="material-symbols-outlined text-xl">format_list_bulleted</span>
-            </button>
-          </div>
-        </div>
+
 
         {/* Artworks Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
