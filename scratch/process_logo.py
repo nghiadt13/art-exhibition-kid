@@ -1,7 +1,7 @@
 from PIL import Image
 import os
 
-input_path = "f:/Work_Space/Project/exhibition/Screenshot 2026-06-27 134005.png"
+input_path = "f:/Work_Space/Project/exhibition/art-exhibition-kid/1782543276454_3645843052976292687_3645843052976292687_a54c08414faf880bf2eef86b897b57ac.jpg"
 output_path = "f:/Work_Space/Project/exhibition/art-exhibition-kid/public/logo.png"
 
 if not os.path.exists(input_path):

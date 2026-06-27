@@ -17,7 +17,7 @@ export default function GalleryView() {
           <h1 className="font-display text-5xl font-black text-primary mb-4">
             Phòng Trưng Bày Của Bé
           </h1>
-          <p className="text-xl text-on-surface-variant max-w-2xl mx-auto italic">
+          <p className="text-xl text-on-surface-variant max-w-3xl mx-auto italic">
             &ldquo;Nơi những ước mơ nhỏ bé được vẽ lên bằng màu sắc của hy vọng và tình thương.&rdquo;
           </p>
         </div>
