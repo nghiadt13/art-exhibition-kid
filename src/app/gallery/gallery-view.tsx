@@ -70,38 +70,6 @@ export default function GalleryView() {
           </button>
         </div>
 
-        {/* Featured Story Banner */}
-        <section className="mt-24 bg-surface-container-lowest/90 backdrop-blur-md rounded-[3rem] p-8 md:p-12 shadow-md border border-outline-variant/30 flex flex-col md:flex-row gap-12 items-center">
-          <div className="w-full md:w-1/2 overflow-hidden rounded-[2rem] shadow-sm aspect-[4/3]">
-            <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPHGbiNZCEUZ8Aj6_NUErslUIeEtDrHAgzR_SmT9Np9ffz6WLSUoN9bJaIcG_8CAhEOIsqn15gGNZohSYNgYzw4tbrTjaIaAM2xDISkHEB4yx0Rvg6aRj85MGB0TdQtGuiT01jel90ETSGRP8iAvMvsR2ktC088Z-VQtdkyKERVgiplXDzz8gjeSXgyr6Zl6-dK27Px-FY1m8YYXnb8mu3A0j3u7bksfc8KbukuDkwJ-7Zv6h4KJbYplNl9OwZtTN7ooL6lBo3PxpY"
-              alt="Story"
-              className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-            />
-          </div>
-          <div className="w-full md:w-1/2 space-y-6">
-            <span className="text-xs font-black text-tertiary uppercase tracking-[0.2em] block">
-              Câu chuyện truyền cảm hứng
-            </span>
-            <h2 className="text-4xl font-black text-primary">
-              Hạnh phúc từ những điều giản dị
-            </h2>
-            <p className="text-lg text-on-surface-variant leading-relaxed italic">
-              Nhờ sự hỗ trợ của cộng đồng, em Mai đã có thể tiếp tục đến trường
-              và nuôi dưỡng ước mơ trở thành cô giáo. Những bức tranh của em
-              không chỉ là nét vẽ, mà là lời cảm ơn chân thành nhất gửi tới
-              những trái tim nhân hậu.
-            </p>
-            <div className="flex flex-wrap gap-4 pt-4">
-              <Link
-                href="/artists"
-                className="bg-primary text-on-primary px-8 py-4 rounded-full font-bold hover:scale-105 transition-all shadow-sm button-3d text-center"
-              >
-                Đọc câu chuyện
-              </Link>
-            </div>
-          </div>
-        </section>
       </main>
 
       <Footer />

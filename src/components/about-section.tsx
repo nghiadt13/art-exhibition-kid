@@ -19,7 +19,7 @@ export default function AboutSection() {
                 <img
                   className="w-full h-full object-contain"
                   alt="Mặt trời crayon"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrQWu_SGKC_FsoFMd311q2WoKNl5EXPjmdUffhMGz2cmfsD6Cz-2WSZiGDfE5YrRsdv2rCakgd6H_Hvt7GA3PPlN9OgSbUEVKrT-MGa-BYT5prpm28RBNoF7OBxex8ChL7fmmWt0ZmqyZzhLrngmSC504XFBQHjl7-KyRGX41s3AksVuEzvEyiKNIh9-DKFdY0dl9d47LtXAxdj6yiy1-EZ70G4_ly1obcGyMws4qmZf0hueOpOw2w4J2pGXe-W8NJ0eLfuJTK9h0Q"
+                  src="/homepage/sun.png"
                 />
               </div>
             </div>
