@@ -51,14 +51,18 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
         </div>
 
         {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           <ArtworkDisplay art={art} />
 
-          {/* Artist & Story Section */}
+          {/* Artist Section */}
           <section className="lg:col-span-5 flex flex-col gap-6">
             <ArtistCard art={art} />
-            <StoryCard art={art} />
           </section>
+        </div>
+
+        {/* Story Section - Centered full-width */}
+        <div className="max-w-[900px] mx-auto mt-12 mb-16">
+          <StoryCard art={art} />
         </div>
 
         {/* Related Works */}

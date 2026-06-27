@@ -11,14 +11,14 @@ interface RelatedWorksProps {
 export default function RelatedWorks({ currentId }: RelatedWorksProps) {
   // Deterministic initial state to prevent layout shift during SSR/Hydration
   const getInitialRelated = () => {
-    const filtered = artworks.filter((art) => art.id !== currentId);
+    const filtered = artworks.filter((art) => art.id !== currentId && art.hasDrawing);
     return filtered.slice(0, 3);
   };
 
   const [suggested, setSuggested] = useState<Artwork[]>(getInitialRelated);
 
   useEffect(() => {
-    const filtered = artworks.filter((art) => art.id !== currentId);
+    const filtered = artworks.filter((art) => art.id !== currentId && art.hasDrawing);
     const shuffled = [...filtered].sort(() => 0.5 - Math.random());
     setSuggested(shuffled.slice(0, 3));
   }, [currentId]);
@@ -70,7 +70,7 @@ export default function RelatedWorks({ currentId }: RelatedWorksProps) {
                 {work.title}
               </h4>
               <p className="text-xs text-on-surface-variant">
-                {work.artistName}, {work.artistAge} tuổi
+                {work.artistName} &bull; Sinh năm {work.birthYear}
               </p>
             </div>
           </Link>

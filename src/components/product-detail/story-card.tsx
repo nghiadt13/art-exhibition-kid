@@ -19,12 +19,11 @@ export default function StoryCard({ art }: StoryCardProps) {
           Câu chuyện đằng sau bức tranh
         </h2>
         <div className="space-y-4 text-on-surface-variant leading-relaxed">
-          <p className="font-body text-base">
-            {art.artistStory}
-          </p>
-          <p className="font-body text-base">
-            {art.description}
-          </p>
+          {art.fullStory.map((paragraph, idx) => (
+            <p key={idx} className="font-body text-base">
+              {paragraph}
+            </p>
+          ))}
         </div>
 
         {/* Donor Count */}

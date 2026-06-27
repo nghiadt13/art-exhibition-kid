@@ -26,7 +26,7 @@ export default function GalleryView() {
 
         {/* Artworks Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {artworks.map((art) => (
+          {artworks.filter((art) => art.hasDrawing).map((art) => (
             <Link
               href={`/product/${art.id}`}
               key={art.id}
@@ -48,7 +48,7 @@ export default function GalleryView() {
                 </h3>
                 <p className="text-secondary text-sm font-semibold mb-4 flex items-center gap-1">
                   <span className="material-symbols-outlined text-base">face</span>{" "}
-                  {art.artistName}, {art.artistAge} tuổi
+                  {art.artistName} &bull; Sinh năm {art.birthYear}
                 </p>
                 <p className="text-on-surface-variant line-clamp-2 mb-6 leading-relaxed">
                   &ldquo;{art.description}&rdquo;
