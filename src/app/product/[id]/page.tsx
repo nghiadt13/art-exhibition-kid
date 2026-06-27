@@ -1,3 +1,5 @@
+import { notFound } from "next/navigation";
+import { artworks } from "@/lib/data";
 import TopNavBar from "@/components/top-nav-bar";
 import ArtworkDisplay from "@/components/product-detail/artwork-display";
 import ArtistCard from "@/components/product-detail/artist-card";
@@ -5,7 +7,19 @@ import StoryCard from "@/components/product-detail/story-card";
 import RelatedWorks from "@/components/product-detail/related-works";
 import ProductFooter from "@/components/product-detail/product-footer";
 
-export default function ProductDetailPage() {
+interface ProductDetailPageProps {
+  params: Promise<{ id: string }>;
+}
+
+export default async function ProductDetailPage({ params }: ProductDetailPageProps) {
+  const { id } = await params;
+  const artworkId = parseInt(id, 10);
+  const art = artworks.find((a) => a.id === artworkId);
+
+  if (!art) {
+    notFound();
+  }
+
   return (
     <>
       <TopNavBar />
@@ -38,12 +52,12 @@ export default function ProductDetailPage() {
 
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-          <ArtworkDisplay />
+          <ArtworkDisplay art={art} />
 
           {/* Artist & Story Section */}
           <section className="lg:col-span-5 flex flex-col gap-6">
-            <ArtistCard />
-            <StoryCard />
+            <ArtistCard art={art} />
+            <StoryCard art={art} />
           </section>
         </div>
 

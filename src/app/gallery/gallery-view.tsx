@@ -4,89 +4,7 @@ import React from "react";
 import Link from "next/link";
 import TopNavBar from "@/components/top-nav-bar";
 import Footer from "@/components/footer";
-
-const artworks = [
-  {
-    id: 1,
-    title: "Tác phẩm số 1",
-    artist: "Họa sĩ nhí 1",
-    description: "Câu chuyện tranh vẽ đang được cập nhật...",
-    tag: "Mới",
-    image: "/artworks/artwork_1.png",
-  },
-  {
-    id: 2,
-    title: "Tác phẩm số 2",
-    artist: "Họa sĩ nhí 2",
-    description: "Câu chuyện tranh vẽ đang được cập nhật...",
-    tag: "Mới",
-    image: "/artworks/artwork_2.png",
-  },
-  {
-    id: 3,
-    title: "Tác phẩm số 3",
-    artist: "Họa sĩ nhí 3",
-    description: "Câu chuyện tranh vẽ đang được cập nhật...",
-    tag: "Mới",
-    image: "/artworks/artwork_3.png",
-  },
-  {
-    id: 4,
-    title: "Tác phẩm số 4",
-    artist: "Họa sĩ nhí 4",
-    description: "Câu chuyện tranh vẽ đang được cập nhật...",
-    tag: "Mới",
-    image: "/artworks/artwork_4.png",
-  },
-  {
-    id: 5,
-    title: "Tác phẩm số 5",
-    artist: "Họa sĩ nhí 5",
-    description: "Câu chuyện tranh vẽ đang được cập nhật...",
-    tag: "Mới",
-    image: "/artworks/artwork_5.png",
-  },
-  {
-    id: 6,
-    title: "Tác phẩm số 6",
-    artist: "Họa sĩ nhí 6",
-    description: "Câu chuyện tranh vẽ đang được cập nhật...",
-    tag: "Mới",
-    image: "/artworks/artwork_6.png",
-  },
-  {
-    id: 7,
-    title: "Tác phẩm số 7",
-    artist: "Họa sĩ nhí 7",
-    description: "Câu chuyện tranh vẽ đang được cập nhật...",
-    tag: "Mới",
-    image: "/artworks/artwork_7.png",
-  },
-  {
-    id: 8,
-    title: "Tác phẩm số 8",
-    artist: "Họa sĩ nhí 8",
-    description: "Câu chuyện tranh vẽ đang được cập nhật...",
-    tag: "Mới",
-    image: "/artworks/artwork_8.png",
-  },
-  {
-    id: 9,
-    title: "Tác phẩm số 9",
-    artist: "Họa sĩ nhí 9",
-    description: "Câu chuyện tranh vẽ đang được cập nhật...",
-    tag: "Mới",
-    image: "/artworks/artwork_9.png",
-  },
-  {
-    id: 10,
-    title: "Tác phẩm số 10",
-    artist: "Họa sĩ nhí 10",
-    description: "Câu chuyện tranh vẽ đang được cập nhật...",
-    tag: "Mới",
-    image: "/artworks/artwork_10.png",
-  },
-];
+import { artworks } from "@/lib/data";
 
 export default function GalleryView() {
   return (
@@ -151,7 +69,7 @@ export default function GalleryView() {
                 </h3>
                 <p className="text-secondary text-sm font-semibold mb-4 flex items-center gap-1">
                   <span className="material-symbols-outlined text-base">face</span>{" "}
-                  {art.artist}
+                  {art.artistName}, {art.artistAge} tuổi
                 </p>
                 <p className="text-on-surface-variant line-clamp-2 mb-6 leading-relaxed">
                   &ldquo;{art.description}&rdquo;

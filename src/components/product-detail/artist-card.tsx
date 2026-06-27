@@ -1,4 +1,11 @@
-export default function ArtistCard() {
+import Link from "next/link";
+import { Artwork } from "@/lib/data";
+
+interface ArtistCardProps {
+  art: Artwork;
+}
+
+export default function ArtistCard({ art }: ArtistCardProps) {
   return (
     <div className="content-card-bg p-8 rounded-[40px] border-2 border-outline-variant relative wonky-rotation-alt overflow-hidden">
       {/* Decorative corner */}
@@ -9,16 +16,16 @@ export default function ArtistCard() {
         <div className="w-24 h-24 rounded-full border-4 border-white shadow-md overflow-hidden bg-surface-container">
           <img
             className="w-full h-full object-cover"
-            alt="Bé Minh Quân"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1vQjWlfz4SfRIUktGDTmPxXDnH7HnuFk5XDzXXVyWw9hOd73Q5M1SPlWbPavS91ypcPojmIGwwv0eZMZuWolBxazENnc4SqIo2XI2uky1iKJlhDaTNXXne_TeLJJOUSDE7UwsIaD1X1nrKO7CEvjrE0VRIdUNhVBgWAfcTzWFboysXYug5Z5t7q0GfqHkNKqnYS8RplEBrccD87CnZ0uHJ-PhSMvhxk8w3cL9bBF7o1LD6GveLmjtbldVWueL7RuxFy2nQcJR1A7h"
+            alt={art.artistName}
+            src={art.artistAvatar}
           />
         </div>
         <div>
           <h2 className="font-headline text-[32px] leading-[1.3] font-bold text-tertiary">
-            Bé Minh Quân
+            {art.artistName}
           </h2>
           <p className="text-[18px] leading-[1.6] font-body text-on-surface-variant">
-            7 tuổi • Quảng Ngãi
+            {art.artistAge} tuổi &bull; {art.location}
           </p>
         </div>
       </div>
@@ -30,12 +37,20 @@ export default function ArtistCard() {
             Ước mơ của em
           </h3>
           <p className="text-base font-body text-on-background">
-            &ldquo;Em muốn trở thành một phi công để có thể bay cao thật cao,
-            vượt qua những ngọn núi sau nhà để nhìn thấy thành phố rực rỡ ánh
-            đèn.&rdquo;
+            &ldquo;{art.dream}&rdquo;
           </p>
         </div>
       </div>
+
+      {/* Button to go to the new /artists page */}
+      <Link
+        href={`/artists#artist-${art.id}`}
+        className="w-full mt-6 flex items-center justify-center gap-2 py-3.5 bg-secondary-container text-on-secondary-container rounded-2xl font-bold text-center text-sm hover:scale-105 active:scale-95 transition-all shadow-sm uppercase tracking-wider button-3d"
+        style={{ boxShadow: "0 4px 0 0 #564500" }}
+      >
+        <span className="material-symbols-outlined text-base">face</span>
+        Xem câu chuyện chi tiết của bé
+      </Link>
     </div>
   );
 }

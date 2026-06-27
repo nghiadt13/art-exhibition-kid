@@ -3,6 +3,7 @@ import Link from "next/link";
 const quickLinks = [
   { label: "Về dự án", href: "/#about" },
   { label: "Phòng tranh", href: "/gallery" },
+  { label: "Các họa sĩ nhí", href: "/artists" },
   { label: "Góp sức", href: "/#volunteer" },
 ];
 

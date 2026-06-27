@@ -1,4 +1,10 @@
-export default function StoryCard() {
+import { Artwork } from "@/lib/data";
+
+interface StoryCardProps {
+  art: Artwork;
+}
+
+export default function StoryCard({ art }: StoryCardProps) {
   return (
     <div className="relative p-2">
       <div className="absolute inset-0 bg-white/40 -rotate-1 rounded-3xl backdrop-blur-sm" />
@@ -14,21 +20,10 @@ export default function StoryCard() {
         </h2>
         <div className="space-y-4 text-on-surface-variant leading-relaxed">
           <p className="font-body text-base">
-            Minh Quân sinh ra trong một gia đình thuần nông tại vùng cao Quảng
-            Ngãi. Cuộc sống của em gắn liền với những buổi chiều cùng bà ra
-            đồng, ngắm nhìn ánh mặt trời lặn sau những dãy núi nhấp nhô.
+            {art.artistStory}
           </p>
           <p className="font-body text-base">
-            &ldquo;Ước Mơ Dưới Ánh Mặt Trời&rdquo; không chỉ là một bức tranh,
-            đó là niềm tin của một cậu bé chưa bao giờ được đi xa khỏi bản làng.
-            Những đám mây trắng phau trong tranh chính là những hòn đảo bay trong
-            tưởng tượng của Quân, nơi mà mọi trẻ em đều được đi học và có đủ cơm
-            no.
-          </p>
-          <p className="font-body text-base">
-            Thông qua những nét vẽ đầy bản năng và rực rỡ này, Quân muốn gửi
-            gắm thông điệp về sự lạc quan, dù hoàn cảnh có khó khăn đến đâu, nụ
-            cười của ánh mặt trời vẫn luôn sưởi ấm trái tim mỗi người.
+            {art.description}
           </p>
         </div>
 
@@ -40,7 +35,7 @@ export default function StoryCard() {
             <div className="w-10 h-10 rounded-full border-2 border-white bg-tertiary-fixed" />
           </div>
           <span className="text-sm font-semibold text-on-surface-variant">
-            124 người đã quyên góp giúp đỡ Quân
+            {art.donorCount} người đã quyên góp giúp đỡ {art.artistName}
           </span>
         </div>
       </div>
