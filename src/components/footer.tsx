@@ -1,86 +1,51 @@
 import Link from "next/link";
 
-const quickLinks = [
-  { label: "Về dự án", href: "/#about" },
-  { label: "Phòng tranh", href: "/gallery" },
-  { label: "Các họa sĩ nhí", href: "/artists" },
-  { label: "Góp sức", href: "/#volunteer" },
-];
-
-const infoLinks = [
-  { label: "Chính sách bảo mật", href: "#" },
-  { label: "Điều khoản sử dụng", href: "#" },
-  { label: "Câu chuyện của bé", href: "#" },
-];
-
-const socialLinks = [
-  { icon: "face_nod", href: "#" },
-  { icon: "camera", href: "#" },
-  { icon: "mail", href: "#" },
-];
-
 export default function Footer() {
   return (
     <footer className="bg-surface-container-lowest/95 backdrop-blur-md border-t-2 border-dashed border-outline-variant py-[80px]">
       <div className="max-w-[1200px] mx-auto px-4 md:px-6">
-        <div className="flex flex-col md:flex-row justify-between items-start gap-6 mb-12">
-          {/* Brand */}
-          <div className="max-w-xs">
-            <Link
-              className="text-headline-lg font-headline text-primary mb-4 block text-3xl font-bold"
-              href="/"
-            >
-              Điều Em Muốn
-            </Link>
-            <p className="text-on-surface-variant text-base">
-              Triển lãm nghệ thuật nhí thiện nguyện lớn nhất Việt Nam. Kết nối
-              trái tim qua hội họa.
-            </p>
-          </div>
-
-          {/* Links Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-2 gap-12">
-            <div className="flex flex-col gap-3">
-              <h4 className="font-bold text-tertiary">Liên kết nhanh</h4>
-              {quickLinks.map((link) => (
-                <Link
-                  key={link.label}
-                  className="text-on-surface-variant hover:text-primary transition-all duration-300 ease-in-out underline decoration-dashed decoration-2 underline-offset-4"
-                  href={link.href}
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-            <div className="flex flex-col gap-3">
-              <h4 className="font-bold text-tertiary">Thông tin</h4>
-              {infoLinks.map((link) => (
-                <Link
-                  key={link.label}
-                  className="text-on-surface-variant hover:text-primary transition-all duration-300 ease-in-out underline decoration-dashed decoration-2 underline-offset-4"
-                  href={link.href}
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* Social */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-12">
+          {/* Cột 1: Đơn vị thực hiện */}
           <div className="flex flex-col gap-4">
-            <h4 className="font-bold text-tertiary">Theo dõi chúng tôi</h4>
-            <div className="flex gap-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.icon}
-                  className="w-10 h-10 bg-primary text-on-primary rounded-full flex items-center justify-center hover:scale-110 transition-transform"
-                  href={social.href}
-                >
-                  <span className="material-symbols-outlined">
-                    {social.icon}
-                  </span>
-                </a>
-              ))}
+            <h4 className="font-bold text-primary text-xl font-headline">Đơn vị thực hiện</h4>
+            <div className="text-on-surface-variant text-base font-body space-y-2">
+              <p className="font-semibold text-tertiary">Dự án xã hội &ldquo;Điều Em Muốn&rdquo;</p>
+              <p>Thực hiện bởi nhóm sinh viên</p>
+              <p>Trường Đại học FPT</p>
+            </div>
+          </div>
+
+          {/* Cột 2: Thông tin liên hệ */}
+          <div className="flex flex-col gap-4">
+            <h4 className="font-bold text-primary text-xl font-headline">Thông tin liên hệ</h4>
+            <div className="text-on-surface-variant text-base font-body space-y-2">
+              <p className="flex items-center gap-2">
+                <span className="material-symbols-outlined text-base text-secondary">phone</span>
+                <span>Hotline:</span>
+                <a href="tel:0393083281" className="hover:text-primary transition-colors font-semibold">0393 083 281</a>
+              </p>
+              <p className="flex items-center gap-2">
+                <span className="material-symbols-outlined text-base text-secondary">mail</span>
+                <span>Email:</span>
+                <a href="mailto:dieuemmuonnnn@gmail.com" className="hover:text-primary transition-colors font-semibold">dieuemmuonnnn@gmail.com</a>
+              </p>
+            </div>
+          </div>
+
+          {/* Cột 3: Kết nối với chúng tôi */}
+          <div className="flex flex-col gap-4">
+            <h4 className="font-bold text-primary text-xl font-headline">Kết nối với chúng tôi</h4>
+            <div className="text-on-surface-variant text-base font-body space-y-2">
+              <p className="flex items-center gap-2">
+                <span className="material-symbols-outlined text-base text-secondary">public</span>
+                <span>Fanpage:</span>
+                <a href="https://www.facebook.com/profile.php?id=61561570774351" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors font-semibold">Điều Em Muốn</a>
+              </p>
+              <p className="flex items-center gap-2">
+                <span className="material-symbols-outlined text-base text-secondary">video_library</span>
+                <span>TikTok:</span>
+                <a href="https://www.tiktok.com/@iu.em.mun50" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors font-semibold">@iu.em.mun50</a>
+              </p>
             </div>
           </div>
         </div>

@@ -30,11 +30,11 @@ export default function HeroSection() {
               href={`/product/${item.id}`}
               className={`inline-block polaroid-frame cursor-pointer transition-all duration-300 hover:scale-110 hover:rotate-0 hover:z-30 hover:shadow-md ${item.rotate}`}
             >
-              <div className="w-36 h-36 md:w-40 md:h-40 overflow-hidden rounded bg-surface-container-low">
+              <div className="h-32 md:h-36 overflow-hidden rounded bg-surface-container-low flex items-center justify-center">
                 <img
                   src={item.src}
                   alt={`Tranh của bé ${item.id}`}
-                  className="w-full h-full object-cover"
+                  className="h-full w-auto object-contain block"
                 />
               </div>
               <div className="text-center mt-3 text-xs font-bold text-primary font-headline">

@@ -12,9 +12,9 @@ export default function ArtworkDisplay({ art }: ArtworkDisplayProps) {
         <div className="absolute -top-4 -left-4 bg-secondary-container text-on-secondary-container px-4 py-2 rounded-full font-bold text-sm z-10 -rotate-12">
           Họa sĩ nhí đóng góp
         </div>
-        <div className="overflow-hidden rounded-lg aspect-[4/3] bg-surface-container/50">
+        <div className="overflow-hidden rounded-lg flex items-center justify-center">
           <img
-            className="w-full h-full object-cover"
+            className="w-full h-auto max-h-[550px] object-contain rounded-lg border-2 border-outline-variant/30 shadow-sm"
             alt={art.title}
             src={art.image}
           />
