@@ -62,7 +62,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
         </div>
 
         {/* Related Works */}
-        <RelatedWorks />
+        <RelatedWorks currentId={art.id} />
       </main>
 
       <ProductFooter />

@@ -1,30 +1,30 @@
+"use client";
+
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { artworks, Artwork } from "@/lib/data";
 
-const relatedWorks = [
-  {
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCpSF2rEPXH12KG2EdpcPb1KQIN0WrXoR8YWfuadJILjZr2ZsfxK19iB37dcwbaqCMONmD0HxNsA-HQXO2jYSXzsAGPS3zvuWVdE1GrWgcPqzVkkyF_Xe9JNHEwQZGCdoZH-hluuaFURe8sWsQR6cyXmD2VY3nyyLQN9H2OGk-4_kcafo0OysAD9gg3S9AHVQ-mAEI9LTBSd87DBQIrMkAWrgXhtQDMNfw3Yow7x-CgQgXDowPlSjRgiBVOpaGqe5ysX0AnbkRCPsHs",
-    title: "Mái Trường Cầu Vồng",
-    artist: "Bé Lan Anh, 6 tuổi",
-    rotation: "wonky-rotation-alt",
-  },
-  {
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDqcX7yrAvguldaBckyjKUO-Fb-zGZQOqQWdxOa6-Ux7Y1i7tQifDSVAezKu8LXenNXJpicEPWZ5PzMfu1tUNad3SyKim7EYplJQ4Va6uEL1OsM16xluqYgSl3xwtYWVcOPBSpBeshChmtfOJhTEbuJg2M6pxXC2O8xBG43R_vxv_dxdlnfXPRKyOpAALOZh9nFRT4DcFAj0LRlbzZTjEWYOl4F2JJS6Igklt2iONNh-b7r58kr8MxnZO1d6WS9ZiRcPdRTBADECL1F",
-    title: "Đại Dương Kỳ Diệu",
-    artist: "Bé Duy Mạnh, 8 tuổi",
-    rotation: "-rotate-1",
-  },
-  {
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBB00KvoOgcp7jiIovYLPyNt4KNeFIR3-G650FFtq7UKwbTGsHVoJLLHvP7bQP_va_3RmNAuIDH-s_X6nIArLpLndZEQ8oTEINKYbRhEzZ_MV33qpJR4cfjT2yNl-1c591n6m6zawFsJlWro6t5kNiVPO_ooggr9vfP_TvryO2SvSJBm2VBtmiU2vs_QjmxRW3_5R64yDPckBbvLaSiMRMw9hlUAk19U3oI9sHJBDGrGWLQ1OTZHELs06L_gkEblE_gUHzvW5sf9xzg",
-    title: "Khu Rừng Biết Hát",
-    artist: "Bé Thảo My, 9 tuổi",
-    rotation: "rotate-2",
-  },
-];
+interface RelatedWorksProps {
+  currentId: number;
+}
 
-export default function RelatedWorks() {
+export default function RelatedWorks({ currentId }: RelatedWorksProps) {
+  // Deterministic initial state to prevent layout shift during SSR/Hydration
+  const getInitialRelated = () => {
+    const filtered = artworks.filter((art) => art.id !== currentId);
+    return filtered.slice(0, 3);
+  };
+
+  const [suggested, setSuggested] = useState<Artwork[]>(getInitialRelated);
+
+  useEffect(() => {
+    const filtered = artworks.filter((art) => art.id !== currentId);
+    const shuffled = [...filtered].sort(() => 0.5 - Math.random());
+    setSuggested(shuffled.slice(0, 3));
+  }, [currentId]);
+
+  const rotations = ["wonky-rotation-alt", "-rotate-1", "rotate-2"];
+
   return (
     <section className="mt-[80px]">
       <div className="flex items-end justify-between mb-8">
@@ -48,10 +48,16 @@ export default function RelatedWorks() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {relatedWorks.map((work) => (
-          <div key={work.title} className="group cursor-pointer">
+        {suggested.map((work, idx) => (
+          <Link
+            key={work.id}
+            href={`/product/${work.id}`}
+            className="group cursor-pointer block"
+          >
             <div
-              className={`content-card-bg p-3 rounded-2xl shadow-sm group-hover:shadow-lg transition-all duration-300 ${work.rotation}`}
+              className={`content-card-bg p-3 rounded-2xl shadow-sm group-hover:shadow-lg transition-all duration-300 ${
+                rotations[idx % rotations.length]
+              }`}
             >
               <div className="aspect-square rounded-xl overflow-hidden mb-3">
                 <img
@@ -60,12 +66,14 @@ export default function RelatedWorks() {
                   src={work.image}
                 />
               </div>
-              <h4 className="font-body text-sm font-semibold text-on-surface">
+              <h4 className="font-body text-sm font-semibold text-on-surface group-hover:text-primary transition-colors">
                 {work.title}
               </h4>
-              <p className="text-xs text-on-surface-variant">{work.artist}</p>
+              <p className="text-xs text-on-surface-variant">
+                {work.artistName}, {work.artistAge} tuổi
+              </p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>
