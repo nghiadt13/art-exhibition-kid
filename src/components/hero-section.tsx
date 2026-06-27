@@ -1,16 +1,17 @@
 import Link from "next/link";
+import { artworks } from "@/lib/data";
 
 const drawings = [
-  { id: 1, src: "/artworks/artwork_1.png", rotate: "rotate-2" },
-  { id: 2, src: "/artworks/artwork_2.png", rotate: "-rotate-2" },
-  { id: 3, src: "/artworks/artwork_3.png", rotate: "rotate-1" },
-  { id: 4, src: "/artworks/artwork_4.png", rotate: "-rotate-1" },
-  { id: 5, src: "/artworks/artwork_5.png", rotate: "rotate-3" },
-  { id: 6, src: "/artworks/artwork_6.png", rotate: "-rotate-3" },
-  { id: 7, src: "/artworks/artwork_7.png", rotate: "rotate-2" },
-  { id: 8, src: "/artworks/artwork_8.png", rotate: "-rotate-2" },
-  { id: 9, src: "/artworks/artwork_9.png", rotate: "rotate-1" },
-  { id: 10, src: "/artworks/artwork_10.png", rotate: "-rotate-1" },
+  { id: 1, rotate: "rotate-2" },
+  { id: 2, rotate: "-rotate-2" },
+  { id: 3, rotate: "rotate-1" },
+  { id: 4, rotate: "-rotate-1" },
+  { id: 5, rotate: "rotate-3" },
+  { id: 6, rotate: "-rotate-3" },
+  { id: 7, rotate: "rotate-2" },
+  { id: 8, rotate: "-rotate-2" },
+  { id: 9, rotate: "rotate-1" },
+  { id: 10, rotate: "-rotate-1" },
 ];
 
 const marqueeItems = [...drawings, ...drawings];
@@ -24,24 +25,29 @@ export default function HeroSection() {
         <div className="absolute top-0 bottom-0 right-0 w-24 bg-gradient-to-l from-background to-transparent z-20 pointer-events-none" />
 
         <div className="animate-marquee gap-8 py-4">
-          {marqueeItems.map((item, index) => (
-            <Link
-              key={index}
-              href={`/product/${item.id}`}
-              className={`inline-block polaroid-frame cursor-pointer transition-all duration-300 hover:scale-110 hover:rotate-0 hover:z-30 hover:shadow-md ${item.rotate}`}
-            >
-              <div className="h-32 md:h-36 overflow-hidden rounded bg-surface-container-low flex items-center justify-center">
-                <img
-                  src={item.src}
-                  alt={`Tranh của bé ${item.id}`}
-                  className="h-full w-auto object-contain block"
-                />
-              </div>
-              <div className="text-center mt-3 text-xs font-bold text-primary font-headline">
-                Tác phẩm #{item.id}
-              </div>
-            </Link>
-          ))}
+          {marqueeItems.map((item, index) => {
+            const art = artworks.find((a) => a.id === item.id);
+            const src = art?.image || `/artworks/artwork_${item.id}.png`;
+            const title = art?.title || `Tác phẩm #${item.id}`;
+            return (
+              <Link
+                key={index}
+                href={`/product/${item.id}`}
+                className={`inline-block polaroid-frame cursor-pointer transition-all duration-300 hover:scale-110 hover:rotate-0 hover:z-30 hover:shadow-md ${item.rotate}`}
+              >
+                <div className="h-32 md:h-36 overflow-hidden rounded bg-surface-container-low flex items-center justify-center">
+                  <img
+                    src={src}
+                    alt={title}
+                    className="h-full w-auto object-contain block"
+                  />
+                </div>
+                <div className="text-center mt-3 text-xs font-bold text-primary font-headline">
+                  {title}
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </div>
 
