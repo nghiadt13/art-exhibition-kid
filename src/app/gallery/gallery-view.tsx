@@ -8,62 +8,83 @@ import Footer from "@/components/footer";
 const artworks = [
   {
     id: 1,
-    title: "Mặt Trời Của Em",
-    artist: "Bé Mai, 6 tuổi",
-    description:
-      "Em muốn vẽ ông mặt trời thật to để sưởi ấm cho tất cả mọi người vào mùa đông.",
-    tag: "Ước mơ",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBdYGHIAA-jHvbrYsk3TizTZLW08NQ-qbf_vYdAM8RVhVBfFgNvp8hoHuWen5p1QIx9u02Dej1zsPFaNSjJcg1hH2w5uLzIvzNze7PD8Etkjt_68hw69YitojD8ZJcpO5puKJoO9O41lV3UoKNUB_pDQjv43PYxSTTyFfCzabC43D_CN5zyiYivq-ONOoilsooQuA0RwfowFnhyaAhBcjVZiE68mnYXt4WMTnZVGd7x2RfcEf4xF206610D6Mx6bULV5mJTxZ4FWG_8",
+    title: "Tác phẩm số 1",
+    artist: "Họa sĩ nhí 1",
+    description: "Câu chuyện tranh vẽ đang được cập nhật...",
+    tag: "Mới",
+    image: "/artworks/artwork_1.png",
   },
   {
     id: 2,
-    title: "Xóm Nhỏ Yên Bình",
-    artist: "Minh Khôi, 8 tuổi",
-    description:
-      "Làng của em có nhiều cây xanh và con suối nhỏ chảy qua mỗi sáng.",
-    tag: "Thiên nhiên",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCIVuZeSmRErYUGh023oDKYwa0PkyctHliNgTXnok2NJPjWXoRwWSDfIp-siLcdmIt7QsrADJ39ChehOXgTp_XsAI90grazSII8HyRMvWqhPtvDx-O-DTgKTq3Dc54GAcCZS77bygB5VtZ0HGgEC3Rp4fArtnp49OBwY69ZndnBW3WTRWAv_NZCi0Bg_qs8oXns2_pYeo0UOOHluIOeh3DUERWdnzdlkVV_Aipk3260lLAFyfUgg3XL0pgilG0SVle31tYliJ6oPcnP",
+    title: "Tác phẩm số 2",
+    artist: "Họa sĩ nhí 2",
+    description: "Câu chuyện tranh vẽ đang được cập nhật...",
+    tag: "Mới",
+    image: "/artworks/artwork_2.png",
   },
   {
     id: 3,
-    title: "Gia Đình Hạnh Phúc",
-    artist: "Bé Na, 5 tuổi",
-    description:
-      "Nhà mình có ba, mẹ và em. Lúc nào cũng tràn ngập tiếng cười.",
-    tag: "Gia đình",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCXulT-ccg8-i6IRdu1WOrZkPTu1hoCkBDzil06A817EOdehOl9f4lI6tBtBaIOicllRbkOvoMGDjetipCOTxZ16chP6w2HmJJeiPvXwfY4EQoIBTrFay6_73NnzY_5lbm5ntBMjYaYk3K1KXG5GJMv5e6vabWRNLK6-1tpq1fFgG6jeqnC7ynMO8G2PG-N3Qh9HktxELEF0lL573tM7AGK7cM0bYWG5CQpdbroIgMSp8g_aJeMf0QNJ4_5aa1AQpOov8oOutQrl45v",
+    title: "Tác phẩm số 3",
+    artist: "Họa sĩ nhí 3",
+    description: "Câu chuyện tranh vẽ đang được cập nhật...",
+    tag: "Mới",
+    image: "/artworks/artwork_3.png",
   },
   {
     id: 4,
-    title: "Em Làm Khoa Học",
-    artist: "Khánh An, 10 tuổi",
-    description:
-      "Sau này lớn lên em muốn trở thành phi hành gia để khám phá vũ trụ.",
-    tag: "Ước mơ",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCC7OgFBvTNmFCzFM_hG4bIOfoJcS7zOhY24qyJGdfhnPx3qnPR8BDNx_kzblkRsbdtYwrUt60D_ceYMCRy0UkZsYglpbGBX0pjGUEnNssu2O7_ki1jigcYYpTTmgXIweg9NyXrS7umohv9GNCnI_rAiXsXEimX4OpMb34XOweCpb6xa5EXLhDGTq3on0O6V83ivGW_jLwYn_FBO9oBU_zcxWTxOD7U3MDyIHzmvt2mLpfirw9NIt5-7-reo7Fynfo0fZrrFgR9J-uF",
+    title: "Tác phẩm số 4",
+    artist: "Họa sĩ nhí 4",
+    description: "Câu chuyện tranh vẽ đang được cập nhật...",
+    tag: "Mới",
+    image: "/artworks/artwork_4.png",
   },
   {
     id: 5,
-    title: "Mái Trường Mến Yêu",
-    artist: "Tùng Lâm, 7 tuổi",
-    description: "Trường của em có nhiều bạn mới và cô giáo rất hiền.",
-    tag: "Trường học",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCpSF2rEPXH12KG2EdpcPb1KQIN0WrXoR8YWfuadJILjZr2ZsfxK19iB37dcwbaqCMONmD0HxNsA-HQXO2jYSXzsAGPS3zvuWVdE1GrWgcPqzVkkyF_Xe9JNHEwQZGCdoZH-hluuaFURe8sWsQR6cyXmD2VY3nyyLQN9H2OGk-4_kcafo0OysAD9gg3S9AHVQ-mAEI9LTBSd87DBQIrMkAWrgXhtQDMNfw3Yow7x-CgQgXDowPlSjRgiBVOpaGqe5ysX0AnbkRCPsHs",
+    title: "Tác phẩm số 5",
+    artist: "Họa sĩ nhí 5",
+    description: "Câu chuyện tranh vẽ đang được cập nhật...",
+    tag: "Mới",
+    image: "/artworks/artwork_5.png",
   },
   {
     id: 6,
-    title: "Biển Chiều Mơ Mộng",
-    artist: "Linh Chi, 9 tuổi",
-    description:
-      "Em muốn một lần được đi tàu ra biển ngắm hoàng hôn rực rỡ.",
-    tag: "Thiên nhiên",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDqcX7yrAvguldaBckyjKUO-Fb-zGZQOqQWdxOa6-Ux7Y1i7tQifDSVAezKu8LXenNXJpicEPWZ5PzMfu1tUNad3SyKim7EYplJQ4Va6uEL1OsM16xluqYgSl3xwtYWVcOPBSpBeshChmtfOJhTEbuJg2M6pxXC2O8xBG43R_vxv_dxdlnfXPRKyOpAALOZh9nFRT4DcFAj0LRlbzZTjEWYOl4F2JJS6Igklt2iONNh-b7r58kr8MxnZO1d6WS9ZiRcPdRTBADECL1F",
+    title: "Tác phẩm số 6",
+    artist: "Họa sĩ nhí 6",
+    description: "Câu chuyện tranh vẽ đang được cập nhật...",
+    tag: "Mới",
+    image: "/artworks/artwork_6.png",
+  },
+  {
+    id: 7,
+    title: "Tác phẩm số 7",
+    artist: "Họa sĩ nhí 7",
+    description: "Câu chuyện tranh vẽ đang được cập nhật...",
+    tag: "Mới",
+    image: "/artworks/artwork_7.png",
+  },
+  {
+    id: 8,
+    title: "Tác phẩm số 8",
+    artist: "Họa sĩ nhí 8",
+    description: "Câu chuyện tranh vẽ đang được cập nhật...",
+    tag: "Mới",
+    image: "/artworks/artwork_8.png",
+  },
+  {
+    id: 9,
+    title: "Tác phẩm số 9",
+    artist: "Họa sĩ nhí 9",
+    description: "Câu chuyện tranh vẽ đang được cập nhật...",
+    tag: "Mới",
+    image: "/artworks/artwork_9.png",
+  },
+  {
+    id: 10,
+    title: "Tác phẩm số 10",
+    artist: "Họa sĩ nhí 10",
+    description: "Câu chuyện tranh vẽ đang được cập nhật...",
+    tag: "Mới",
+    image: "/artworks/artwork_10.png",
   },
 ];
 
