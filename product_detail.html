@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chi tiết tác phẩm | Điều Em Muốn</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@700;800&amp;family=Plus+Jakarta+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error-container": "#93000a",
+                    "on-secondary-container": "#735d00",
+                    "on-secondary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#fdd758",
+                    "primary": "#005da7",
+                    "on-error": "#ffffff",
+                    "on-surface-variant": "#414751",
+                    "surface-tint": "#0060ac",
+                    "on-tertiary-fixed": "#410008",
+                    "on-secondary-fixed-variant": "#564500",
+                    "surface": "#f8faf6",
+                    "tertiary-fixed": "#ffdad8",
+                    "surface-container-low": "#f2f4f0",
+                    "surface-container-high": "#e7e9e5",
+                    "surface-container-highest": "#e1e3df",
+                    "on-background": "#191c1a",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed-variant": "#004883",
+                    "secondary-fixed-dim": "#e8c346",
+                    "tertiary-fixed-dim": "#ffb3b1",
+                    "outline": "#717783",
+                    "inverse-on-surface": "#eff1ed",
+                    "surface-dim": "#d8dbd7",
+                    "primary-container": "#2976c7",
+                    "secondary-fixed": "#ffe081",
+                    "inverse-surface": "#2e312f",
+                    "secondary": "#725c00",
+                    "on-primary-container": "#fdfcff",
+                    "on-surface": "#191c1a",
+                    "surface-container-lowest": "#ffffff",
+                    "background": "#f8faf6",
+                    "outline-variant": "#c1c7d3",
+                    "primary-fixed-dim": "#a4c9ff",
+                    "surface-bright": "#f8faf6",
+                    "tertiary-container": "#ba5556",
+                    "inverse-primary": "#a4c9ff",
+                    "surface-container": "#eceeeb",
+                    "surface-variant": "#e1e3df",
+                    "on-secondary-fixed": "#231b00",
+                    "on-primary-fixed": "#001c39",
+                    "on-tertiary-fixed-variant": "#7f282c",
+                    "error-container": "#ffdad6",
+                    "tertiary": "#9b3d40",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-container": "#fffbff",
+                    "primary-fixed": "#d4e3ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1200px",
+                    "margin-mobile": "16px",
+                    "unit": "8px",
+                    "gutter": "24px",
+                    "section-gap": "80px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "label-md": ["Plus Jakarta Sans"],
+                    "headline-lg-mobile": ["Be Vietnam Pro"],
+                    "headline-lg": ["Be Vietnam Pro"],
+                    "display-lg": ["Be Vietnam Pro"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAVTGFsIvD7GZb_GB4ZUgHA5wP4uMQoW0TKgFOLukEx2HZOueGHrgv6t27ECHRt93Suab6iJPb1XkaPsE0KejxEpV8gQ7KZqQ4ILiyRTqPGKtEVPIE3OEvv3pxjHikNvLXCc4lUnxgdZaM52UUaV039qZrY3ap5ttyLwjv593uowmcEcjFVZKa3WECbd0rNMwhzDFab1864ppjQXLzzl82T7SYtYmM3hqMHHuFe9QQNF7so_OivWmn3I1hQnf0nJTDmwwPlIGCsJkk0');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        .paper-texture-overlay {
+            background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0.4;
+            z-index: 0;
+        }
+        .content-card-bg {
+            background-color: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
+        }
+        .sketch-border {
+            border: 2px dashed #717783;
+            border-radius: 24px;
+        }
+        .wonky-rotation {
+            transform: rotate(-1.5deg);
+        }
+        .wonky-rotation-alt {
+            transform: rotate(2deg);
+        }
+        .crayon-button-shadow {
+            box-shadow: 0 4px 0 0 #004883;
+        }
+        .crayon-button-shadow:active {
+            box-shadow: 0 0 0 0 #004883;
+            transform: translateY(4px);
+        }
+        .bouncy-hover:hover {
+            transform: scale(1.05) rotate(1deg);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .hand-drawn-star {
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+    </style>
+</head>
+<body class="text-on-surface font-body-md relative min-h-screen">
+<div class="paper-texture-overlay"></div>
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md shadow-sm">
+<nav class="flex justify-between items-center w-full px-margin-mobile md:px-gutter max-w-container-max mx-auto h-20">
+<a class="text-headline-lg font-headline-lg font-extrabold text-primary tracking-tight" href="#">Điều Em Muốn</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Về chúng tôi</a>
+<a class="text-primary border-b-4 border-secondary rounded-full pb-1 font-label-md text-label-md" href="#">Phòng tranh</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Góp sức</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Liên hệ</a>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-md text-label-md transition-all duration-200 active:scale-95 hover:scale-105 crayon-button-shadow">Quyên góp</button>
+</div>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+</header>
+<main class="pt-32 pb-section-gap px-margin-mobile md:px-gutter max-w-container-max mx-auto relative z-10">
+<!-- Decorative Scribbles -->
+<div class="absolute top-40 -left-10 opacity-40 pointer-events-none hidden lg:block">
+<div class="w-32 h-32 bg-secondary-container hand-drawn-star rotate-12"></div>
+</div>
+<div class="absolute bottom-20 -right-10 opacity-40 pointer-events-none hidden lg:block">
+<svg fill="none" height="200" viewbox="0 0 200 200" width="200" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 100C10 44.7715 54.7715 10 110 10C165.228 10 210 54.7715 210 100" stroke="#005da7" stroke-dasharray="10 15" stroke-linecap="round" stroke-width="4"></path>
+</svg>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Artwork Display Section -->
+<section class="lg:col-span-7 flex flex-col gap-6">
+<div class="content-card-bg p-4 md:p-8 rounded-xl shadow-[0_20px_40px_rgba(0,0,0,0.1)] wonky-rotation relative">
+<div class="absolute -top-4 -left-4 bg-secondary-container text-on-secondary-container px-4 py-2 rounded-full font-bold text-label-md z-10 -rotate-12">Tác phẩm của tháng</div>
+<div class="overflow-hidden rounded-lg aspect-[4/3] bg-surface-container/50">
+<img class="w-full h-full object-cover" data-alt="A vibrant and heartwarming children's painting titled 'Dreaming of the Sun'. The artwork features a large, smiling yellow sun with rosy cheeks in a bright blue sky filled with fluffy white clouds. Below the sun, rolling green hills under a soft light create a peaceful landscape. The painting style is naive and expressive, using bold crayon-like textures and bright, cheerful primary colors typical of a young child's imaginative world." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdYGHIAA-jHvbrYsk3TizTZLW08NQ-qbf_vYdAM8RVhVBfFgNvp8hoHuWen5p1QIx9u02Dej1zsPFaNSjJcg1hH2w5uLzIvzNze7PD8Etkjt_68hw69YitojD8ZJcpO5puKJoO9O41lV3UoKNUB_pDQjv43PYxSTTyFfCzabC43D_CN5zyiYivq-ONOoilsooQuA0RwfowFnhyaAhBcjVZiE68mnYXt4WMTnZVGd7x2RfcEf4xF206610D6Mx6bULV5mJTxZ4FWG_8"/>
+</div>
+<div class="mt-6 text-center">
+<h1 class="font-display-lg text-display-lg text-primary mb-2">Ước Mơ Dưới Ánh Mặt Trời</h1>
+<p class="text-on-surface-variant font-body-md italic">Sáp màu trên giấy vẽ, 2024</p>
+</div>
+</div>
+<!-- Action Buttons (Mobile Friendly layout) -->
+<div class="flex flex-wrap gap-4 mt-8 md:justify-start justify-center">
+<button class="flex items-center gap-2 bg-primary text-on-primary px-10 py-4 rounded-full font-headline-lg-mobile text-headline-lg-mobile transition-all hover:scale-105 active:scale-95 crayon-button-shadow group">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                        Quyên góp ngay
+                    </button>
+<button class="flex items-center gap-2 content-card-bg text-primary border-4 border-dashed border-primary/30 px-8 py-4 rounded-full font-headline-lg-mobile text-headline-lg-mobile transition-all hover:bg-white active:scale-95 group">
+<span class="material-symbols-outlined">share</span>
+                        Chia sẻ câu chuyện
+                    </button>
+</div>
+</section>
+<!-- Artist & Story Section -->
+<section class="lg:col-span-5 flex flex-col gap-gutter">
+<!-- Artist Card -->
+<div class="content-card-bg p-8 rounded-[40px] border-2 border-outline-variant relative wonky-rotation-alt overflow-hidden">
+<div class="absolute top-0 right-0 w-24 h-24 bg-tertiary-container/20 rounded-bl-[100%]"></div>
+<div class="flex items-center gap-6 mb-6">
+<div class="w-24 h-24 rounded-full border-4 border-white shadow-md overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A portrait of a young Vietnamese boy around 7 years old, smiling brightly. He has short dark hair and is wearing a simple, clean but worn yellow t-shirt. Behind him is a soft-focus background of a rural landscape with lush greenery. The lighting is warm and natural, capturing a sense of pure hope and innocence. The image has a soft, nostalgic film-like quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1vQjWlfz4SfRIUktGDTmPxXDnH7HnuFk5XDzXXVyWw9hOd73Q5M1SPlWbPavS91ypcPojmIGwwv0eZMZuWolBxazENnc4SqIo2XI2uky1iKJlhDaTNXXne_TeLJJOUSDE7UwsIaD1X1nrKO7CEvjrE0VRIdUNhVBgWAfcTzWFboysXYug5Z5t7q0GfqHkNKqnYS8RplEBrccD87CnZ0uHJ-PhSMvhxk8w3cL9bBF7o1LD6GveLmjtbldVWueL7RuxFy2nQcJR1A7h"/>
+</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-tertiary">Bé Minh Quân</h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant">7 tuổi • Quảng Ngãi</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="bg-white/70 backdrop-blur-sm p-4 rounded-2xl border border-white/80">
+<h3 class="font-label-md text-label-md text-primary uppercase tracking-wider mb-1">Ước mơ của em</h3>
+<p class="text-body-md font-body-md text-on-background">"Em muốn trở thành một phi công để có thể bay cao thật cao, vượt qua những ngọn núi sau nhà để nhìn thấy thành phố rực rỡ ánh đèn."</p>
+</div>
+</div>
+</div>
+<!-- Heartfelt Story -->
+<div class="relative p-2">
+<div class="absolute inset-0 bg-white/40 -rotate-1 rounded-3xl backdrop-blur-sm"></div>
+<div class="relative content-card-bg p-8 rounded-3xl sketch-border">
+<span class="material-symbols-outlined text-4xl text-primary mb-4" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Câu chuyện đằng sau bức tranh</h2>
+<div class="space-y-4 text-on-surface-variant leading-relaxed">
+<p class="font-body-md text-body-md">
+                                Minh Quân sinh ra trong một gia đình thuần nông tại vùng cao Quảng Ngãi. Cuộc sống của em gắn liền với những buổi chiều cùng bà ra đồng, ngắm nhìn ánh mặt trời lặn sau những dãy núi nhấp nhô.
+                            </p>
+<p class="font-body-md text-body-md">
+                                "Ước Mơ Dưới Ánh Mặt Trời" không chỉ là một bức tranh, đó là niềm tin của một cậu bé chưa bao giờ được đi xa khỏi bản làng. Những đám mây trắng phau trong tranh chính là những hòn đảo bay trong tưởng tượng của Quân, nơi mà mọi trẻ em đều được đi học và có đủ cơm no.
+                            </p>
+<p class="font-body-md text-body-md">
+                                Thông qua những nét vẽ đầy bản năng và rực rỡ này, Quân muốn gửi gắm thông điệp về sự lạc quan, dù hoàn cảnh có khó khăn đến đâu, nụ cười của ánh mặt trời vẫn luôn sưởi ấm trái tim mỗi người.
+                            </p>
+</div>
+<div class="mt-8 pt-6 border-t-2 border-dashed border-outline-variant flex items-center justify-between">
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-white bg-primary-fixed"></div>
+<div class="w-10 h-10 rounded-full border-2 border-white bg-secondary-fixed"></div>
+<div class="w-10 h-10 rounded-full border-2 border-white bg-tertiary-fixed"></div>
+</div>
+<span class="text-label-md font-label-md text-on-surface-variant">124 người đã quyên góp giúp đỡ Quân</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Related Works -->
+<section class="mt-section-gap">
+<div class="flex items-end justify-between mb-8">
+<div class="content-card-bg px-6 py-4 rounded-2xl shadow-sm">
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-label-md font-bold mb-2 inline-block">Khám phá thêm</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Những ước mơ khác</h2>
+</div>
+<a class="content-card-bg px-6 py-4 rounded-full text-primary font-bold hover:underline flex items-center gap-1 group shadow-sm" href="#">
+                    Xem tất cả <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Mini Card 1 -->
+<div class="group cursor-pointer">
+<div class="content-card-bg p-3 rounded-2xl shadow-sm group-hover:shadow-lg transition-all duration-300 wonky-rotation-alt">
+<div class="aspect-square rounded-xl overflow-hidden mb-3">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A child's drawing of a colorful school with many children playing outside. There is a bright rainbow arching over the school building. The style uses vibrant felt-tip marker textures and energetic lines, evoking a sense of joy and community in a learning environment. Light-mode aesthetic with bright white paper background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpSF2rEPXH12KG2EdpcPb1KQIN0WrXoR8YWfuadJILjZr2ZsfxK19iB37dcwbaqCMONmD0HxNsA-HQXO2jYSXzsAGPS3zvuWVdE1GrWgcPqzVkkyF_Xe9JNHEwQZGCdoZH-hluuaFURe8sWsQR6cyXmD2VY3nyyLQN9H2OGk-4_kcafo0OysAD9gg3S9AHVQ-mAEI9LTBSd87DBQIrMkAWrgXhtQDMNfw3Yow7x-CgQgXDowPlSjRgiBVOpaGqe5ysX0AnbkRCPsHs"/>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface">Mái Trường Cầu Vồng</h4>
+<p class="text-xs text-on-surface-variant">Bé Lan Anh, 6 tuổi</p>
+</div>
+</div>
+<!-- Mini Card 2 -->
+<div class="group cursor-pointer">
+<div class="content-card-bg p-3 rounded-2xl shadow-sm group-hover:shadow-lg transition-all duration-300 -rotate-1">
+<div class="aspect-square rounded-xl overflow-hidden mb-3">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A whimsical drawing of an underwater world with glowing neon fish and a friendly octopus wearing a hat. The ocean is painted in various shades of turquoise and deep blue with white sparkling bubbles. Childlike wonder expressed through organic shapes and imaginative creature designs. Modern light-mode charitable art style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqcX7yrAvguldaBckyjKUO-Fb-zGZQOqQWdxOa6-Ux7Y1i7tQifDSVAezKu8LXenNXJpicEPWZ5PzMfu1tUNad3SyKim7EYplJQ4Va6uEL1OsM16xluqYgSl3xwtYWVcOPBSpBeshChmtfOJhTEbuJg2M6pxXC2O8xBG43R_vxv_dxdlnfXPRKyOpAALOZh9nFRT4DcFAj0LRlbzZTjEWYOl4F2JJS6Igklt2iONNh-b7r58kr8MxnZO1d6WS9ZiRcPdRTBADECL1F"/>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface">Đại Dương Kỳ Diệu</h4>
+<p class="text-xs text-on-surface-variant">Bé Duy Mạnh, 8 tuổi</p>
+</div>
+</div>
+<!-- Mini Card 3 -->
+<div class="group cursor-pointer">
+<div class="content-card-bg p-3 rounded-2xl shadow-sm group-hover:shadow-lg transition-all duration-300 rotate-2">
+<div class="aspect-square rounded-xl overflow-hidden mb-3">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="An artistic representation of a lush forest with tall, uniquely patterned trees and a sparkling river. The style is a mix of finger painting and thick brush strokes in earthy greens and vibrant floral colors. It captures the raw beauty of nature through a child's eyes. Minimalist white frame around the image on a light grey-blue background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBB00KvoOgcp7jiIovYLPyNt4KNeFIR3-G650FFtq7UKwbTGsHVoJLLHvP7bQP_va_3RmNAuIDH-s_X6nIArLpLndZEQ8oTEINKYbRhEzZ_MV33qpJR4cfjT2yNl-1c591n6m6zawFsJlWro6t5kNiVPO_ooggr9vfP_TvryO2SvSJBm2VBtmiU2vs_QjmxRW3_5R64yDPckBbvLaSiMRMw9hlUAk19U3oI9sHJBDGrGWLQ1OTZHELs06L_gkEblE_gUHzvW5sf9xzg"/>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface">Khu Rừng Biết Hát</h4>
+<p class="text-xs text-on-surface-variant">Bé Thảo My, 9 tuổi</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface/95 backdrop-blur-md py-section-gap border-t-2 border-dashed border-outline-variant relative z-10">
+<div class="flex flex-col md:flex-row justify-between items-start w-full px-margin-mobile md:px-gutter max-w-container-max mx-auto gap-gutter">
+<div class="max-w-md">
+<h2 class="text-headline-lg font-headline-lg text-primary mb-4">Điều Em Muốn</h2>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6">Mỗi bức tranh là một câu chuyện, mỗi sự đóng góp là một bước chân đưa các em đến gần hơn với ước mơ của mình.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined">mail</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-12">
+<div>
+<h4 class="font-bold text-on-surface mb-4">Liên kết</h4>
+<ul class="space-y-3">
+<li><a class="text-on-surface-variant hover:text-primary underline decoration-dashed decoration-2 underline-offset-4 transition-all" href="#">Câu chuyện của bé</a></li>
+<li><a class="text-on-surface-variant hover:text-primary underline decoration-dashed decoration-2 underline-offset-4 transition-all" href="#">Tham gia cùng chúng tôi</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-4">Pháp lý</h4>
+<ul class="space-y-3">
+<li><a class="text-on-surface-variant hover:text-primary underline decoration-dashed decoration-2 underline-offset-4 transition-all" href="#">Chính sách bảo mật</a></li>
+<li><a class="text-on-surface-variant hover:text-primary underline decoration-dashed decoration-2 underline-offset-4 transition-all" href="#">Điều khoản sử dụng</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="mt-section-gap pt-8 border-t border-outline-variant/30 text-center w-full px-margin-mobile">
+<p class="text-on-surface-variant text-sm">© 2024 Điều Em Muốn - Triển lẫm nghệ thuật nhí thiện nguyện</p>
+</div>
+</footer>
+<script>
+        // Micro-interaction for the "Donate" button to simulate a physical push
+        const donateBtn = document.querySelector('button.crayon-button-shadow');
+        if(donateBtn) {
+            donateBtn.addEventListener('mousedown', () => {
+                donateBtn.style.transform = 'translateY(4px)';
+                donateBtn.style.boxShadow = '0 0 0 0 #004883';
+            });
+            donateBtn.addEventListener('mouseup', () => {
+                donateBtn.style.transform = 'translateY(0)';
+                donateBtn.style.boxShadow = '0 4px 0 0 #004883';
+            });
+        }
+
+        // Add a subtle parallax effect to the decorative stars on scroll
+        window.addEventListener('scroll', () => {
+            const scroll = window.pageYOffset;
+            const star = document.querySelector('.hand-drawn-star');
+            if(star) {
+                star.parentElement.style.transform = `translateY(${scroll * 0.15}px)`;
+            }
+        });
+    </script>
+</body></html>
