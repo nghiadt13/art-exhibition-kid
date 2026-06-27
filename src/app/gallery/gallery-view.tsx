@@ -93,12 +93,12 @@ export default function GalleryView() {
               những trái tim nhân hậu.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
-              <button className="bg-primary text-on-primary px-8 py-4 rounded-full font-bold hover:scale-105 transition-all shadow-sm button-3d">
-                Góp sức ngay
-              </button>
-              <button className="bg-transparent text-primary border-2 border-primary border-dashed px-8 py-4 rounded-full font-bold hover:bg-surface-container transition-all">
+              <Link
+                href="/artists"
+                className="bg-primary text-on-primary px-8 py-4 rounded-full font-bold hover:scale-105 transition-all shadow-sm button-3d text-center"
+              >
                 Đọc câu chuyện
-              </button>
+              </Link>
             </div>
           </div>
         </section>

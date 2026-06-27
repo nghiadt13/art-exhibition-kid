@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function StorySection() {
   return (
     <section className="bg-primary/90 backdrop-blur-sm text-on-primary py-[80px] relative overflow-hidden">
@@ -28,7 +30,7 @@ export default function StorySection() {
               ước mơ trở thành cô giáo dạy vẽ cho những bạn nhỏ có hoàn cảnh
               giống mình.&rdquo;
             </p>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 mb-8">
               <div className="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
                 <span className="material-symbols-outlined text-on-secondary-container">
                   favorite
@@ -38,6 +40,12 @@ export default function StorySection() {
                 Cùng chúng tôi viết tiếp những câu chuyện đẹp
               </span>
             </div>
+            <Link
+              href="/artists"
+              className="inline-block bg-primary text-on-primary px-8 py-4 rounded-full font-bold hover:scale-105 transition-all shadow-sm button-3d text-center"
+            >
+              Đọc câu chuyện
+            </Link>
           </div>
         </div>
       </div>
