@@ -1,18 +1,51 @@
 import Link from "next/link";
 
+const drawings = [
+  { id: 1, src: "/artworks/artwork_1.png", rotate: "rotate-2" },
+  { id: 2, src: "/artworks/artwork_2.png", rotate: "-rotate-2" },
+  { id: 3, src: "/artworks/artwork_3.png", rotate: "rotate-1" },
+  { id: 4, src: "/artworks/artwork_4.png", rotate: "-rotate-1" },
+  { id: 5, src: "/artworks/artwork_5.png", rotate: "rotate-3" },
+  { id: 6, src: "/artworks/artwork_6.png", rotate: "-rotate-3" },
+  { id: 7, src: "/artworks/artwork_7.png", rotate: "rotate-2" },
+  { id: 8, src: "/artworks/artwork_8.png", rotate: "-rotate-2" },
+  { id: 9, src: "/artworks/artwork_9.png", rotate: "rotate-1" },
+  { id: 10, src: "/artworks/artwork_10.png", rotate: "-rotate-1" },
+];
+
+const marqueeItems = [...drawings, ...drawings];
+
 export default function HeroSection() {
   return (
-    <header className="relative pt-32 pb-20 overflow-hidden scribble-bg">
-      <div className="max-w-[1200px] mx-auto px-4 md:px-6 flex flex-col items-center text-center relative z-10">
-        {/* Logo Image */}
-        <div className="w-full max-w-2xl mb-8 float-anim">
-          <img
-            alt="Điều Em Muốn Logo"
-            className="w-full h-auto drop-shadow-2xl"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgpjJkXClINoQVWDX_Dsqd4GrCxc6-eri64n5BgnqVuGiqHtP70gbs1hdsfcx_1ZJ9_bRVM2opzjqbZoPqcB2d5s0AmDPXG5AKnAp5VY3LukW1MhgH5c1-WQkfa4Xv4GYoPWR31MLUz_OnRw9npgzWOy_2aaKMJcx9HYuYMpp4daxkjjHwt1RUOV19p6Wc1dDRGmJjxOUi2LTkkkurelTG47FCzLMFtUV8f8BRJIPMYxr3Fg2OXCaKqpYdx063pywCtl0ueQv7lg2R"
-          />
-        </div>
+    <header className="relative pt-24 pb-20 overflow-hidden scribble-bg">
+      {/* Infinite Marquee Artworks */}
+      <div className="w-full overflow-hidden py-6 relative z-10 mb-6">
+        <div className="absolute top-0 bottom-0 left-0 w-24 bg-gradient-to-r from-background to-transparent z-20 pointer-events-none" />
+        <div className="absolute top-0 bottom-0 right-0 w-24 bg-gradient-to-l from-background to-transparent z-20 pointer-events-none" />
 
+        <div className="animate-marquee gap-8 py-4">
+          {marqueeItems.map((item, index) => (
+            <Link
+              key={index}
+              href={`/product/${item.id}`}
+              className={`inline-block polaroid-frame cursor-pointer transition-all duration-300 hover:scale-110 hover:rotate-0 hover:z-30 hover:shadow-md ${item.rotate}`}
+            >
+              <div className="w-36 h-36 md:w-40 md:h-40 overflow-hidden rounded bg-surface-container-low">
+                <img
+                  src={item.src}
+                  alt={`Tranh của bé ${item.id}`}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="text-center mt-3 text-xs font-bold text-primary font-headline">
+                Tác phẩm #{item.id}
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      <div className="max-w-[1200px] mx-auto px-4 md:px-6 flex flex-col items-center text-center relative z-10">
         <h1 className="font-display text-[48px] leading-[1.2] tracking-[-0.02em] font-extrabold text-primary max-w-3xl mb-6">
           Chắp cánh những ước mơ nhỏ qua từng nét vẽ hồn nhiên
         </h1>
