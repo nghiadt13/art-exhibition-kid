@@ -18,16 +18,14 @@ export default function TopNavBar() {
       <div className="flex justify-between items-center w-full h-20">
         {/* Logo - far left */}
         <Link
-          className="text-headline-lg font-headline font-extrabold text-primary tracking-tight flex items-center gap-2 pl-6 md:pl-12"
+          className="flex items-center pl-6 md:pl-12"
           href="/"
         >
-          <span
-            className="material-symbols-outlined text-4xl"
-            style={{ fontVariationSettings: "'FILL' 1" }}
-          >
-            palette
-          </span>
-          Điều Em Muốn
+          <img
+            src="/logo.jpg"
+            alt="Điều Em Muốn"
+            className="h-14 w-auto object-contain"
+          />
         </Link>
 
         {/* Desktop Nav - far right */}
@@ -41,9 +39,6 @@ export default function TopNavBar() {
               {link.label}
             </Link>
           ))}
-          <button className="bg-primary text-on-primary px-6 py-2 rounded-full font-body text-sm font-semibold hover:scale-105 active:scale-95 transition-all duration-200 button-3d">
-            Quyên góp
-          </button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -68,9 +63,6 @@ export default function TopNavBar() {
               {link.label}
             </Link>
           ))}
-          <button className="w-full mt-2 bg-primary text-on-primary px-6 py-2 rounded-full font-body text-sm font-semibold button-3d">
-            Quyên góp
-          </button>
         </div>
       )}
     </nav>
