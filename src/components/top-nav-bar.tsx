@@ -7,7 +7,6 @@ const navLinks = [
   { label: "Về dự án", href: "/#about" },
   { label: "Phòng tranh", href: "/gallery" },
   { label: "Câu chuyện", href: "/artists" },
-  { label: "Liên hệ", href: "/#contact" },
 ];
 
 export default function TopNavBar() {
