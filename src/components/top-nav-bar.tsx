@@ -23,7 +23,7 @@ export default function TopNavBar() {
           <img
             src="/logo.png"
             alt="Điều Em Muốn"
-            className="h-20 md:h-24 w-auto object-contain py-1"
+            className="h-16 md:h-20 w-auto object-contain py-1"
           />
         </Link>
 
