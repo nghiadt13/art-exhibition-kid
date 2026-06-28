@@ -1,3 +1,5 @@
+import LazyImage from "@/components/lazy-image";
+
 export default function AboutSection() {
   return (
     <div id="about" className="divide-y divide-outline-variant/10">
@@ -8,18 +10,18 @@ export default function AboutSection() {
             {/* Image Column */}
             <div className="w-full lg:col-span-6 relative">
               <div className="polaroid-frame rotate-[-2deg] transition-transform hover:rotate-0 duration-500 shadow-lg">
-                <img
+                <LazyImage
                   className="w-full h-[400px] object-cover rounded-sm"
                   alt="Về dự án Điều em muốn"
-                  src="/homepage/home_1.png"
+                  src="/homepage/home_1.webp"
                 />
               </div>
               {/* Floating sun decoration */}
               <div className="absolute -bottom-8 -left-8 w-32 h-32 float-anim hidden md:block">
-                <img
+                <LazyImage
                   className="w-full h-full object-contain"
                   alt="Mặt trời crayon"
-                  src="/homepage/sun.png"
+                  src="/homepage/sun.webp"
                 />
               </div>
             </div>
@@ -83,10 +85,10 @@ export default function AboutSection() {
             {/* Image Column */}
             <div className="w-full lg:col-span-6 lg:order-1">
               <div className="polaroid-frame rotate-[2deg] transition-transform hover:rotate-0 duration-500 shadow-lg">
-                <img
+                <LazyImage
                   className="w-full h-[400px] object-cover rounded-sm"
                   alt="Câu chuyện lớp học Bảo Ái"
-                  src="/homepage/home_2.png"
+                  src="/homepage/home_2.webp"
                 />
               </div>
             </div>
@@ -101,10 +103,10 @@ export default function AboutSection() {
             {/* Image Column */}
             <div className="w-full lg:col-span-6 relative">
               <div className="polaroid-frame rotate-[-1deg] transition-transform hover:rotate-0 duration-500 shadow-lg">
-                <img
+                <LazyImage
                   className="w-full h-[400px] object-cover rounded-sm"
                   alt="Thông điệp dự án Điều em muốn"
-                  src="/homepage/home_3.png"
+                  src="/homepage/home_3.webp"
                 />
               </div>
             </div>

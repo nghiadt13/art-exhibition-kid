@@ -258,7 +258,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("/bg.jpg");
+  background-image: url("/bg.webp");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -266,3 +266,25 @@ body::before {
   z-index: -1;
   opacity: 0.25;
 }
+
+/* Shimmer Animation for LazyImage Skeleton */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--color-surface-container-low) 25%,
+    var(--color-surface-container) 50%,
+    var(--color-surface-container-low) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
+}
+

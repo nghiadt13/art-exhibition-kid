@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { artworks } from "@/lib/data";
+import LazyImage from "@/components/lazy-image";
 
 const drawings = [
   { id: 1, rotate: "rotate-2" },
@@ -34,7 +35,7 @@ export default function HeroSection() {
         <div className="animate-marquee gap-8 py-4">
           {marqueeItems.map((item, index) => {
             const art = artworks.find((a) => a.id === item.id);
-            const src = art?.image || `/artworks/artwork_${item.id}.png`;
+            const src = art?.image || `/artworks/artwork_${item.id}.webp`;
             const title = art?.title || `Tác phẩm #${item.id}`;
             return (
               <Link
@@ -43,10 +44,12 @@ export default function HeroSection() {
                 className={`inline-block polaroid-frame cursor-pointer transition-all duration-300 hover:scale-110 hover:rotate-0 hover:z-30 hover:shadow-md ${item.rotate}`}
               >
                 <div className="h-32 md:h-36 overflow-hidden rounded bg-surface-container-low flex items-center justify-center">
-                  <img
+                  <LazyImage
                     src={src}
                     alt={title}
                     className="h-full w-auto object-contain block"
+                    wrapperClassName="h-full w-full flex items-center justify-center"
+                    loading="eager"
                   />
                 </div>
                 <div className="text-center mt-3 text-xs font-bold text-primary font-headline">

@@ -26,7 +26,7 @@ export const artworks: Artwork[] = [
     artistAge: 11,
     birthYear: 2015,
     location: "Thôn Đoàn Kết",
-    artistAvatar: "/artists/artist_10.jpg",
+    artistAvatar: "/artists/artist_10.webp",
     artistStory:
       "Nghiêm Thị Phương Thảo là học sinh người Kinh đến từ thôn Đoàn Kết. Em mắc khuyết tật trí tuệ, rối loạn tâm thần, tăng động giảm chú ý và khó kiểm soát hành vi. Gia đình em có hoàn cảnh khó khăn, công việc và thu nhập của bố mẹ đều không ổn định.",
     dream:
@@ -40,7 +40,7 @@ export const artworks: Artwork[] = [
       "Mỗi nét vẽ là một điều em muốn nói. Mỗi bức tranh là một cánh cửa mở ra thế giới đầy yêu thương của các em. Chỉ cần dành một chút thời gian lắng nghe, chúng ta sẽ thấy trong những gam màu giản dị ấy luôn có những ước mơ rất đẹp đang chờ được chắp cánh.",
     ],
     tag: "Hy vọng",
-    image: "/artworks/artwork_1.png",
+    image: "/artworks/artwork_1.webp",
     year: "2024",
     material: "Sáp màu trên giấy vẽ",
     donorCount: 42,
@@ -53,7 +53,7 @@ export const artworks: Artwork[] = [
     artistAge: 16,
     birthYear: 2010,
     location: "Thôn Đoàn Kết",
-    artistAvatar: "/artists/artist_6.jpg",
+    artistAvatar: "/artists/artist_6.webp",
     artistStory:
       "Nguyễn Cao Phong là học sinh người Kinh đến từ thôn Đoàn Kết. Em mắc khuyết tật trí tuệ, khuyết tật ngôn ngữ, tăng động giảm chú ý và gặp khó khăn trong việc kiểm soát hành vi. So với nhiều bạn khác, hoàn cảnh gia đình em ổn định hơn.",
     dream:
@@ -66,7 +66,7 @@ export const artworks: Artwork[] = [
       "Nhìn vào bức tranh này, chúng ta thấy một thế giới được xây dựng bằng những điều giản dị nhất: một lá cờ, một ngôi nhà, một mặt trời và những trái tim yêu thương. Đó cũng chính là những điều mà mọi đứa trẻ đều mong muốn được gìn giữ — được sống trong bình yên, được yêu thương và được tự hào về nơi mình thuộc về.",
     ],
     tag: "Tự hào",
-    image: "/artworks/artwork_2.png",
+    image: "/artworks/artwork_2.webp",
     year: "2024",
     material: "Sáp màu trên giấy vẽ",
     donorCount: 56,
@@ -79,7 +79,7 @@ export const artworks: Artwork[] = [
     artistAge: 16,
     birthYear: 2012,
     location: "Khu Trung Tâm",
-    artistAvatar: "/artists/artist_11.png",
+    artistAvatar: "/artists/artist_11.webp",
     artistStory:
       "Hà Quỳnh Chi là học sinh dân tộc Tày sinh sống tại khu Trung Tâm. Em mắc khuyết tật trí tuệ, tự kỷ và tăng động giảm chú ý. Gia đình em thuộc diện khó khăn khi bố mẹ đều chưa có việc làm ổn định, ảnh hưởng đến điều kiện chăm sóc và học tập của em.",
     dream:
@@ -92,7 +92,7 @@ export const artworks: Artwork[] = [
       "Điều đáng yêu nhất ở bức tranh không nằm ở kỹ thuật vẽ hay những đường nét hoàn hảo, mà nằm ở sự chân thành. Qua những nét bút giản dị, Chi đã vẽ nên một thế giới nhỏ bé nhưng đầy đủ những điều quý giá nhất: một mái nhà để trở về và một người bạn để yêu thương.",
     ],
     tag: "Gia đình",
-    image: "/artworks/artwork_3.png",
+    image: "/artworks/artwork_3.webp",
     year: "2024",
     material: "Màu nước trên giấy",
     donorCount: 78,
@@ -105,7 +105,7 @@ export const artworks: Artwork[] = [
     artistAge: 15,
     birthYear: 2011,
     location: "Thôn Ngòi Chán",
-    artistAvatar: "/artists/artist_4.jpg",
+    artistAvatar: "/artists/artist_4.webp",
     artistStory:
       "Trịnh Ngọc Huy là học sinh dân tộc Sán Chay ở thôn Ngòi Chán. Em mắc khuyết tật trí tuệ, khuyết tật ngôn ngữ, khuyết tật thị giác và rối loạn phổ tự kỷ. Gia đình thuộc diện khó khăn khi mẹ thường xuyên đau ốm, còn bố không có công việc ổn định.",
     dream:
@@ -118,7 +118,7 @@ export const artworks: Artwork[] = [
       "Điều đặc biệt nhất của bức tranh nằm ở cách Huy lựa chọn hình ảnh để kể câu chuyện của mình. Em không dùng nhiều màu sắc hay chi tiết phức tạp, nhưng lại truyền tải được một thông điệp rất đẹp: trong cuộc sống, ai cũng cần một bàn tay nâng đỡ, một nơi để cảm thấy an toàn và những người để yêu thương.",
     ],
     tag: "Yêu thương",
-    image: "/artworks/artwork_4.png",
+    image: "/artworks/artwork_4.webp",
     year: "2024",
     material: "Bút màu dạ và sáp dầu",
     donorCount: 88,
@@ -131,7 +131,7 @@ export const artworks: Artwork[] = [
     artistAge: 17,
     birthYear: 2009,
     location: "Thôn Đát Lụa",
-    artistAvatar: "/artists/artist_8.jpg",
+    artistAvatar: "/artists/artist_8.webp",
     artistStory:
       "Hoàng Ngọc Tú là học sinh dân tộc Dao ở thôn Đát Lụa. Em mắc khuyết tật trí tuệ, khuyết tật ngôn ngữ, chậm phát triển thể chất, tăng động giảm chú ý và không làm chủ được hành vi. Gia đình rất khó khăn, có hai người con bị khuyết tật nặng, bố mẹ không có việc làm ổn định, nhà ở xa lớp học và không có phương tiện đưa đón.",
     dream:
@@ -145,7 +145,7 @@ export const artworks: Artwork[] = [
       "Có những lúc chúng ta nghĩ rằng mình đang giúp các em nhìn thấy vẻ đẹp của cuộc sống. Nhưng thực ra, chính những bức tranh như thế này lại nhắc chúng ta rằng hạnh phúc đôi khi chỉ đến từ những điều rất nhỏ bé: một ngày có nắng, một mái nhà để trở về và một trái tim vẫn luôn biết yêu thương.",
     ],
     tag: "Thiên nhiên",
-    image: "/artworks/artwork_5.png",
+    image: "/artworks/artwork_5.webp",
     year: "2024",
     material: "Sáp màu trên giấy vẽ",
     donorCount: 35,
@@ -158,7 +158,7 @@ export const artworks: Artwork[] = [
     artistAge: 15,
     birthYear: 2011,
     location: "Thôn Ngòi Khang",
-    artistAvatar: "/artists/artist_9.jpg",
+    artistAvatar: "/artists/artist_9.webp",
     artistStory:
       "Hà Kim Anh là học sinh dân tộc Tày, sinh sống tại thôn Ngòi Khang. Em mắc khuyết tật trí tuệ, tăng động giảm chú ý và gặp khó khăn trong việc kiểm soát hành vi. Gia đình thuộc diện khó khăn, chưa có công việc và nguồn thu nhập ổn định.",
     dream:
@@ -171,7 +171,7 @@ export const artworks: Artwork[] = [
       "Điều đặc biệt ở bức tranh không nằm ở kỹ thuật vẽ, mà nằm ở cảm xúc mà nó mang lại. Một trái tim lớn đến vậy như muốn nói rằng trong thế giới của Kim Anh luôn có chỗ cho sự yêu thương, cho những điều tốt đẹp và cho những người em quý mến. Nhìn bức tranh, chúng ta chợt nhận ra rằng trẻ em thường có cách thể hiện tình cảm rất đơn giản. Các em không cần những lời nói hoa mỹ hay những thông điệp lớn lao. Đôi khi, chỉ một trái tim được tô thật cẩn thận cũng đủ để nói lên rất nhiều điều.",
     ],
     tag: "Yêu thương",
-    image: "/artworks/artwork_6.png",
+    image: "/artworks/artwork_6.webp",
     year: "2024",
     material: "Bút lông màu nước",
     donorCount: 62,
@@ -184,7 +184,7 @@ export const artworks: Artwork[] = [
     artistAge: 12,
     birthYear: 2014,
     location: "Thôn Ngòi Ngần",
-    artistAvatar: "/artists/artist_5.png",
+    artistAvatar: "/artists/artist_5.webp",
     artistStory:
       "Hoàng Ngọc Chiến là học sinh dân tộc Dao, sinh sống tại thôn Ngòi Ngần. Em mắc bệnh tim bẩm sinh, khuyết tật trí tuệ, khuyết tật ngôn ngữ, khuyết tật thị giác và tự kỷ. Gia đình em rơi vào hoàn cảnh đặc biệt khó khăn khi ngôi nhà bị cuốn trôi hoàn toàn sau cơn bão Yagi. Mẹ em thường xuyên phải điều trị bệnh, còn bố không có việc làm ổn định.",
     dream:
@@ -197,7 +197,7 @@ export const artworks: Artwork[] = [
       "Nhìn bức tranh của Chiến, chúng ta như được trở về với tuổi thơ – khi một tờ giấy trắng và vài hộp màu đã đủ để tạo nên cả một thế giới. Một thế giới không cần hoàn hảo, chỉ cần có trí tưởng tượng, sự tự do và niềm vui. Có lẽ điều đẹp nhất trong bức tranh này không nằm ở những gì được vẽ ra, mà nằm ở niềm hạnh phúc rất giản dị của Chiến khi được tự do thể hiện thế giới trong mắt mình.",
     ],
     tag: "Ước mơ",
-    image: "/artworks/artwork_7.png",
+    image: "/artworks/artwork_7.webp",
     year: "2024",
     material: "Màu nước và sáp dầu",
     donorCount: 94,
@@ -210,7 +210,7 @@ export const artworks: Artwork[] = [
     artistAge: 17,
     birthYear: 2009,
     location: "Thôn Khe May, xã Yên Bình",
-    artistAvatar: "/artists/artist_7.jpg",
+    artistAvatar: "/artists/artist_7.webp",
     artistStory:
       "Lý Thị Huệ là học sinh dân tộc Dao ở thôn Khe May, xã Yên Bình. Em bị khuyết tật trí tuệ, khuyết tật ngôn ngữ, tự kỷ và thường xuyên run chân tay. Gia đình rất khó khăn, đông con, bố mẹ không có việc làm ổn định. Nhà cách lớp học khoảng 14 km và không có phương tiện đưa đón nên việc đến lớp của em gặp nhiều trở ngại.",
     dream:
@@ -223,7 +223,7 @@ export const artworks: Artwork[] = [
       "Bằng những nét vẽ trong trẻo nhất, Huệ đã bộc lộ khát vọng hạnh phúc, mong muốn dùng chính đôi bàn tay của mình để chạm vào thế giới, để sẻ chia và lan tỏa sự ấm áp đến mọi người xung quanh.",
     ],
     tag: "Ước mơ",
-    image: "/artworks/artwork_8.png",
+    image: "/artworks/artwork_8.webp",
     year: "2024",
     material: "Bút chì màu và sáp dầu",
     donorCount: 110,
@@ -236,7 +236,7 @@ export const artworks: Artwork[] = [
     artistAge: 17,
     birthYear: 2009,
     location: "Thôn Làng Giữa",
-    artistAvatar: "/artists/artist_2.jpg",
+    artistAvatar: "/artists/artist_2.webp",
     artistStory:
       "Hoàng Thị Huế là học sinh dân tộc Tày đến từ thôn Làng Giữa. Em mắc khuyết tật trí tuệ, chậm phát triển thể chất và suy dinh dưỡng. Gia đình có hoàn cảnh khó khăn khi cả bố và mẹ đều chưa có việc làm ổn định, ảnh hưởng lớn đến điều kiện chăm sóc và học tập của em.",
     dream:
@@ -249,7 +249,7 @@ export const artworks: Artwork[] = [
       "Qua những nét vẽ mộc mạc của Huế, chúng ta nhận ra rằng hạnh phúc đôi khi không đến từ những điều lớn lao. Với một đứa trẻ, hạnh phúc có thể chỉ đơn giản là một ngôi nhà thân quen, một ngày nhiều nắng và những người yêu thương luôn ở bên cạnh.",
     ],
     tag: "Gia đình",
-    image: "/artworks/artwork_9.png",
+    image: "/artworks/artwork_9.webp",
     year: "2024",
     material: "Sáp màu và bút lông dạ",
     donorCount: 52,
@@ -262,7 +262,7 @@ export const artworks: Artwork[] = [
     artistAge: 12,
     birthYear: 2014,
     location: "Thôn Ngòi Khang",
-    artistAvatar: "/artists/artist_3.jpg",
+    artistAvatar: "/artists/artist_3.webp",
     artistStory:
       "Lê Ngọc Mai là học sinh người Kinh, sinh sống tại thôn Ngòi Khang. Do sinh non, em gặp nhiều vấn đề về sức khỏe như khuyết tật trí tuệ, tăng động giảm chú ý, suy dinh dưỡng và mắc bệnh đường tiêu hóa mãn tính. Gia đình em gặp nhiều khó khăn về kinh tế, công việc không ổn định và mẹ thường xuyên đau ốm.",
     dream:
@@ -275,7 +275,7 @@ export const artworks: Artwork[] = [
       "Ngọc Mai tô màu theo cách rất tự nhiên. Có những nét màu còn chưa đều, có những đường vẽ còn vụng về và ngây ngô, nhưng chính điều đó lại làm cho bức tranh trở nên đáng yêu hơn. Mỗi nét vẽ đều là cách em kể câu chuyện của riêng mình, bằng những gì em nhìn thấy, yêu thích và mơ ước. Qua những nét vẽ hồn nhiên này, cho thấy đó không phải là những điều lớn lao, nhưng lại là những điều khiến tuổi thơ trở nên thật đẹp.",
     ],
     tag: "Ước mơ",
-    image: "/artworks/artwork_10.png",
+    image: "/artworks/artwork_10.webp",
     year: "2024",
     material: "Sáp màu trên giấy vẽ",
     donorCount: 124,
@@ -288,7 +288,7 @@ export const artworks: Artwork[] = [
     artistAge: 22,
     birthYear: 2004,
     location: "Thôn Làng Giữa",
-    artistAvatar: "/artists/artist_1.jpg",
+    artistAvatar: "/artists/artist_1.webp",
     artistStory:
       "La Quốc Bảo là học sinh dân tộc Tày, sinh sống tại thôn Làng Giữa. Em bị khuyết tật vận động, khuyết tật ngôn ngữ và teo cơ co cứng, gây nhiều khó khăn trong sinh hoạt cũng như học tập. Gia đình em thuộc diện khó khăn, trong khi mẹ em vừa gặp tai nạn nên cuộc sống càng thêm nhiều vất vả.",
     dream:
@@ -311,7 +311,7 @@ export const artworks: Artwork[] = [
     artistAge: 8,
     birthYear: 2018,
     location: "Thôn Làng Giữa",
-    artistAvatar: "/artists/artist_12.jpg",
+    artistAvatar: "/artists/artist_12.webp",
     artistStory:
       "Nông Anh Minh là học sinh người Kinh đến từ thôn Làng Giữa. Em mắc khuyết tật trí tuệ, tự kỷ, tăng động giảm chú ý và gặp khó khăn trong việc kiểm soát hành vi. Gia đình em thuộc diện khó khăn, bố mẹ không có công việc ổn định nên việc chăm sóc và hỗ trợ em trong học tập còn nhiều hạn chế.",
     dream:

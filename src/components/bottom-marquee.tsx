@@ -1,16 +1,17 @@
 "use client";
 
 import { useState } from "react";
+import LazyImage from "@/components/lazy-image";
 
 const marqueeImages = [
-  "/marquee/marquee_1.png",
-  "/marquee/marquee_2.png",
-  "/marquee/marquee_3.png",
-  "/marquee/marquee_4.png",
-  "/marquee/marquee_5.png",
-  "/marquee/marquee_6.png",
-  "/marquee/marquee_7.png",
-  "/marquee/marquee_8.png",
+  "/marquee/marquee_1.webp",
+  "/marquee/marquee_2.webp",
+  "/marquee/marquee_3.webp",
+  "/marquee/marquee_4.webp",
+  "/marquee/marquee_5.webp",
+  "/marquee/marquee_6.webp",
+  "/marquee/marquee_7.webp",
+  "/marquee/marquee_8.webp",
 ];
 
 const displayImages = [...marqueeImages, ...marqueeImages];
@@ -50,10 +51,11 @@ export default function BottomMarquee() {
                 onClick={() => setSelectedImage(src)}
               >
                 <div className="w-48 h-36 md:w-56 md:h-40 overflow-hidden rounded bg-surface-container-low flex items-center justify-center">
-                  <img
+                  <LazyImage
                     src={src}
                     alt={`Khoảnh khắc cùng em ${index + 1}`}
                     className="w-full h-full object-cover block select-none pointer-events-none"
+                    wrapperClassName="w-full h-full"
                   />
                 </div>
               </div>
@@ -79,10 +81,11 @@ export default function BottomMarquee() {
               <span className="material-symbols-outlined text-2xl">close</span>
             </button>
             <div className="w-full max-h-[70vh] rounded-2xl overflow-hidden bg-surface-container flex items-center justify-center mt-6">
-              <img
+              <LazyImage
                 className="max-w-full max-h-[70vh] object-contain select-none"
                 alt="Khoảnh khắc cùng em phóng to"
                 src={selectedImage}
+                noWrapper={true}
               />
             </div>
             <h3 className="font-headline text-lg font-bold text-primary mb-2 uppercase tracking-wider">

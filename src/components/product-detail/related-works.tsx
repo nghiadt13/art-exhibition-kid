@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { artworks, Artwork } from "@/lib/data";
+import LazyImage from "@/components/lazy-image";
 
 interface RelatedWorksProps {
   currentId: number;
@@ -60,10 +61,11 @@ export default function RelatedWorks({ currentId }: RelatedWorksProps) {
               }`}
             >
               <div className="aspect-square rounded-xl overflow-hidden mb-3">
-                <img
+                <LazyImage
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   alt={work.title}
                   src={work.image}
+                  wrapperClassName="w-full h-full"
                 />
               </div>
               <h4 className="font-body text-sm font-semibold text-on-surface group-hover:text-primary transition-colors">

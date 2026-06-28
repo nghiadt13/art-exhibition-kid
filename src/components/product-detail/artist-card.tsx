@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Artwork } from "@/lib/data";
+import LazyImage from "@/components/lazy-image";
 
 interface ArtistCardProps {
   art: Artwork;
@@ -23,10 +24,11 @@ export default function ArtistCard({ art }: ArtistCardProps) {
             className="w-24 h-24 rounded-full border-4 border-white shadow-md overflow-hidden bg-surface-container relative cursor-zoom-in hover:scale-105 active:scale-95 transition-all duration-300"
             onClick={() => setShowModal(true)}
           >
-            <img
+            <LazyImage
               className="w-full h-full object-cover pointer-events-none select-none"
               alt={art.artistName}
               src={art.artistAvatar}
+              wrapperClassName="w-full h-full"
             />
           </div>
           <div>
@@ -82,10 +84,11 @@ export default function ArtistCard({ art }: ArtistCardProps) {
               <span className="material-symbols-outlined text-2xl">close</span>
             </button>
             <div className="w-72 h-72 md:w-[400px] md:h-[400px] rounded-full border-4 border-white shadow-md overflow-hidden bg-surface-container relative mt-4">
-              <img
+              <LazyImage
                 className="w-full h-full object-cover select-none"
                 alt={art.artistName}
                 src={art.artistAvatar}
+                wrapperClassName="w-full h-full"
               />
             </div>
             <h3 className="font-headline text-2xl font-bold text-primary mt-2">

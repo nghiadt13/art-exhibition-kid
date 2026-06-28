@@ -5,6 +5,7 @@ import Link from "next/link";
 import TopNavBar from "@/components/top-nav-bar";
 import Footer from "@/components/footer";
 import { artworks } from "@/lib/data";
+import LazyImage from "@/components/lazy-image";
 
 export default function GalleryView() {
   return (
@@ -33,10 +34,11 @@ export default function GalleryView() {
               className="group block bg-surface-container-lowest/90 rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 hover:-translate-y-2 border border-outline-variant/20 wonky-rotation even:wonky-rotation-alt"
             >
               <div className="relative h-64 overflow-hidden">
-                <img
+                <LazyImage
                   src={art.image}
                   alt={art.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  wrapperClassName="w-full h-full"
                 />
                 <div className="absolute top-4 left-4 bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold shadow-sm">
                   {art.tag}

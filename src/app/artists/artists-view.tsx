@@ -5,6 +5,7 @@ import Link from "next/link";
 import TopNavBar from "@/components/top-nav-bar";
 import Footer from "@/components/footer";
 import { artworks } from "@/lib/data";
+import LazyImage from "@/components/lazy-image";
 
 export default function ArtistsView() {
   const [highlightedId, setHighlightedId] = useState<number | null>(null);
@@ -70,10 +71,11 @@ export default function ArtistsView() {
                   className="w-32 h-32 md:w-36 md:h-36 rounded-full border-4 border-white shadow-md overflow-hidden bg-surface-container relative cursor-zoom-in hover:scale-105 active:scale-95 transition-all duration-300"
                   onClick={() => setSelectedAvatar({ src: art.artistAvatar, name: art.artistName })}
                 >
-                  <img
+                  <LazyImage
                     className="w-full h-full object-cover pointer-events-none select-none"
                     alt={art.artistName}
                     src={art.artistAvatar}
+                    wrapperClassName="w-full h-full"
                   />
                 </div>
                 <h2 className="font-headline text-3xl font-bold text-primary mt-4">
@@ -124,10 +126,11 @@ export default function ArtistsView() {
                       href={`/product/${art.id}`}
                       className="w-full aspect-[4/3] overflow-hidden rounded-2xl bg-surface-container-low shadow-sm border border-outline-variant/30 hover:scale-105 hover:shadow-md transition-all duration-300 relative group"
                     >
-                      <img
+                      <LazyImage
                         src={art.image}
                         alt={art.title}
                         className="w-full h-full object-cover"
+                        wrapperClassName="w-full h-full"
                       />
                       <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                         <span className="material-symbols-outlined text-white text-3xl">zoom_in</span>
@@ -186,10 +189,11 @@ export default function ArtistsView() {
               <span className="material-symbols-outlined text-2xl">close</span>
             </button>
             <div className="w-72 h-72 md:w-[400px] md:h-[400px] rounded-full border-4 border-white shadow-md overflow-hidden bg-surface-container relative mt-4">
-              <img
+              <LazyImage
                 className="w-full h-full object-cover select-none"
                 alt={selectedAvatar.name}
                 src={selectedAvatar.src}
+                wrapperClassName="w-full h-full"
               />
             </div>
             <h3 className="font-headline text-2xl font-bold text-primary mt-2">

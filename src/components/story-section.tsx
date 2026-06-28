@@ -1,4 +1,5 @@
 import Link from "next/link";
+import LazyImage from "@/components/lazy-image";
 
 export default function StorySection() {
   return (
@@ -8,10 +9,11 @@ export default function StorySection() {
           {/* Image */}
           <div className="w-full md:w-1/3">
             <div className="polaroid-frame rotate-[3deg]">
-              <img
+              <LazyImage
                 className="w-full h-full object-cover rounded-sm"
                 alt="Em Mai vẽ tranh"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPHGbiNZCEUZ8Aj6_NUErslUIeEtDrHAgzR_SmT9Np9ffz6WLSUoN9bJaIcG_8CAhEOIsqn15gGNZohSYNgYzw4tbrTjaIaAM2xDISkHEB4yx0Rvg6aRj85MGB0TdQtGuiT01jel90ETSGRP8iAvMvsR2ktC088Z-VQtdkyKERVgiplXDzz8gjeSXgyr6Zl6-dK27Px-FY1m8YYXnb8mu3A0j3u7bksfc8KbukuDkwJ-7Zv6h4KJbYplNl9OwZtTN7ooL6lBo3PxpY"
+                wrapperClassName="w-full h-full"
               />
             </div>
           </div>

@@ -1,4 +1,5 @@
 import { Artwork } from "@/lib/data";
+import LazyImage from "@/components/lazy-image";
 
 interface ArtworkDisplayProps {
   art: Artwork;
@@ -13,10 +14,12 @@ export default function ArtworkDisplay({ art }: ArtworkDisplayProps) {
           Họa sĩ nhí đóng góp
         </div>
         <div className="overflow-hidden rounded-lg flex items-center justify-center">
-          <img
+          <LazyImage
             className="w-full h-auto max-h-[550px] object-contain rounded-lg border-2 border-outline-variant/30 shadow-sm"
             alt={art.title}
             src={art.image}
+            wrapperClassName="w-full h-full flex items-center justify-center"
+            loading="eager"
           />
         </div>
         <div className="mt-6 text-center">
