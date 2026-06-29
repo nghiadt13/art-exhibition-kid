@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="flex flex-col gap-4">
             <h4 className="font-bold text-primary text-xl font-headline">Đơn vị thực hiện</h4>
             <div className="text-on-surface-variant text-base font-body space-y-2">
-              <p className="font-semibold text-tertiary">Dự án xã hội &ldquo;Điều Em Muốn&rdquo;</p>
+              <p className="font-semibold text-tertiary">Dự án &ldquo;Điều Em Muốn&rdquo;</p>
               <p>Thực hiện bởi nhóm sinh viên</p>
               <p>Trường Đại học FPT</p>
             </div>

@@ -32,7 +32,7 @@ export default function AboutSection() {
                 Về dự án
               </div>
               <h2 className="font-display text-[40px] leading-[1.2] font-black text-primary">
-                Dự án xã hội "Điều em muốn"
+                Dự án  "Điều em muốn"
               </h2>
               <p className="font-body text-[18px] leading-[1.7] text-on-surface-variant">
                 &ldquo;Điều em muốn&rdquo; là dự án truyền thông cộng đồng hướng
