@@ -63,10 +63,11 @@
   --radius-xl: 0.75rem;
   --radius-full: 9999px;
 
-  /* Font Families */
-  --font-body: "Plus Jakarta Sans", sans-serif;
-  --font-headline: "Be Vietnam Pro", sans-serif;
-  --font-display: "Be Vietnam Pro", sans-serif;
+  --font-body: var(--font-body-custom), "Plus Jakarta Sans", sans-serif;
+  --font-headline: var(--font-headline-custom), "Playpen Sans", cursive;
+  --font-display: var(--font-headline-custom), "Playpen Sans", cursive;
+
+
 
   /* Font Sizes */
   --text-body-lg: 18px;

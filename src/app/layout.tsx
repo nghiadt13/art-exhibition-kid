@@ -1,20 +1,21 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Be_Vietnam_Pro } from "next/font/google";
+import { Plus_Jakarta_Sans, Playpen_Sans } from "next/font/google";
 import "./globals.css";
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   weight: ["400", "600"],
-  variable: "--font-body",
+  variable: "--font-body-custom",
   display: "swap",
 });
 
-const beVietnam = Be_Vietnam_Pro({
-  subsets: ["latin"],
-  weight: ["700", "800"],
-  variable: "--font-headline",
+const playpenSans = Playpen_Sans({
+  subsets: ["vietnamese"],
+  weight: ["400", "600", "700"],
+  variable: "--font-headline-custom",
   display: "swap",
 });
+
 
 export const metadata: Metadata = {
   title: "Điều Em Muốn - Triển lãm nghệ thuật nhí thiện nguyện",
@@ -36,10 +37,11 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${plusJakarta.variable} ${beVietnam.variable} bg-background text-on-surface font-body relative`}
+        className={`${plusJakarta.variable} ${playpenSans.variable} bg-background text-on-surface font-body relative`}
       >
         {children}
       </body>
     </html>
   );
 }
+
