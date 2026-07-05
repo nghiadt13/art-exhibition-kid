@@ -3,18 +3,19 @@ import { Plus_Jakarta_Sans, Playpen_Sans } from "next/font/google";
 import "./globals.css";
 
 const plusJakarta = Plus_Jakarta_Sans({
-  subsets: ["latin"],
+  subsets: ["latin", "vietnamese"],
   weight: ["400", "600"],
   variable: "--font-body-custom",
   display: "swap",
 });
 
 const playpenSans = Playpen_Sans({
-  subsets: ["vietnamese"],
+  subsets: ["latin", "vietnamese"],
   weight: ["400", "600", "700"],
   variable: "--font-headline-custom",
   display: "swap",
 });
+
 
 
 export const metadata: Metadata = {
