@@ -4,12 +4,25 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import TopNavBar from "@/components/top-nav-bar";
 import Footer from "@/components/footer";
-import { artworks } from "@/lib/data";
+import { artworks, Artwork } from "@/lib/data";
 import LazyImage from "@/components/lazy-image";
 
 export default function ArtistsView() {
   const [highlightedId, setHighlightedId] = useState<number | null>(null);
   const [selectedAvatar, setSelectedAvatar] = useState<{ src: string; name: string } | null>(null);
+  const [selectedMediaArtist, setSelectedMediaArtist] = useState<Artwork | null>(null);
+  const [activeMedia, setActiveMedia] = useState<{ type: "video" | "image"; src: string } | null>(null);
+
+  useEffect(() => {
+    if (selectedMediaArtist) {
+      setActiveMedia({
+        type: selectedMediaArtist.artistVideo ? "video" : "image",
+        src: selectedMediaArtist.artistVideo || selectedMediaArtist.artistPhotos?.[0] || selectedMediaArtist.artistAvatar,
+      });
+    } else {
+      setActiveMedia(null);
+    }
+  }, [selectedMediaArtist]);
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -104,14 +117,24 @@ export default function ArtistsView() {
                   </p>
                 </div>
 
-                <div className="bg-white/70 backdrop-blur-sm p-5 rounded-2xl border border-white/80">
-                  <h4 className="font-headline text-sm font-bold text-secondary uppercase tracking-wider mb-2 flex items-center gap-1.5">
-                    <span className="material-symbols-outlined text-lg">workspace_premium</span>
-                    Điều em mong muốn
-                  </h4>
-                  <p className="text-[16px] font-body text-on-background italic leading-[1.5]">
-                    &ldquo;{art.dream}&rdquo;
-                  </p>
+                <div className="space-y-4">
+                  <div className="bg-white/70 backdrop-blur-sm p-5 rounded-2xl border border-white/80">
+                    <h4 className="font-headline text-sm font-bold text-secondary uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                      <span className="material-symbols-outlined text-lg">workspace_premium</span>
+                      Điều em mong muốn
+                    </h4>
+                    <p className="text-[16px] font-body text-on-background italic leading-[1.5]">
+                      &ldquo;{art.dream}&rdquo;
+                    </p>
+                  </div>
+
+                  <button
+                    onClick={() => setSelectedMediaArtist(art)}
+                    className="flex items-center gap-2 px-5 py-2.5 bg-secondary text-on-secondary rounded-2xl font-bold text-sm hover:scale-105 active:scale-95 transition-all button-3d cursor-pointer shadow-sm w-fit"
+                  >
+                    <span className="material-symbols-outlined text-lg">play_circle</span>
+                    Khoảnh khắc đời thường & Video
+                  </button>
                 </div>
               </div>
 
@@ -172,33 +195,166 @@ export default function ArtistsView() {
 
       <Footer />
 
-      {/* Avatar Lightbox Modal */}
-      {selectedAvatar && (
+      {/* Media & Story Lightbox Modal */}
+      {selectedMediaArtist && activeMedia && (
         <div
-          className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[999] flex items-center justify-center p-4 cursor-zoom-out animate-fade-in"
-          onClick={() => setSelectedAvatar(null)}
+          className="fixed inset-0 bg-black/85 backdrop-blur-md z-[999] flex items-center justify-center p-4 md:p-6 cursor-zoom-out animate-fade-in"
+          onClick={() => setSelectedMediaArtist(null)}
         >
-          <div 
-            className="relative max-w-lg w-full bg-surface-container-lowest rounded-[2.5rem] p-6 border border-outline-variant/30 shadow-2xl flex flex-col items-center gap-4 cursor-default animate-scale-up" 
+          <div
+            className="relative max-w-[95%] md:max-w-5xl lg:max-w-6xl w-full bg-surface-container-lowest rounded-[2.5rem] p-6 md:p-8 border border-outline-variant/30 shadow-2xl flex flex-col md:flex-row gap-6 md:gap-8 items-stretch cursor-default animate-scale-up overflow-y-auto max-h-[95vh] md:max-h-[90vh]"
             onClick={(e) => e.stopPropagation()}
           >
-            <button 
-              className="absolute top-4 right-4 text-outline hover:text-primary transition-colors flex items-center justify-center p-2 rounded-full hover:bg-surface-container-high"
-              onClick={() => setSelectedAvatar(null)}
+            {/* Close Button */}
+            <button
+              className="absolute top-4 right-4 text-outline hover:text-primary transition-colors flex items-center justify-center p-2 rounded-full hover:bg-surface-container-high cursor-pointer z-20"
+              onClick={() => setSelectedMediaArtist(null)}
             >
               <span className="material-symbols-outlined text-2xl">close</span>
             </button>
-            <div className="w-72 h-72 md:w-[400px] md:h-[400px] rounded-full border-4 border-white shadow-md overflow-hidden bg-surface-container relative mt-4">
-              <LazyImage
-                className="w-full h-full object-cover select-none"
-                alt={selectedAvatar.name}
-                src={selectedAvatar.src}
-                wrapperClassName="w-full h-full"
-              />
+
+            {/* Left Column: Media Display & Playlist */}
+            <div className="w-full md:w-3/5 flex flex-col gap-4">
+              <div className="w-full aspect-video rounded-2xl overflow-hidden bg-black shadow-inner relative border border-outline-variant/20">
+                {activeMedia.type === "video" ? (
+                  <iframe
+                    className="w-full h-full"
+                    src={activeMedia.src}
+                    title={`Video về ${selectedMediaArtist.artistName}`}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                ) : (
+                  <LazyImage
+                    className="w-full h-full object-contain bg-black/35"
+                    alt={`Ảnh của ${selectedMediaArtist.artistName}`}
+                    src={activeMedia.src}
+                    wrapperClassName="w-full h-full"
+                  />
+                )}
+              </div>
+
+              {/* Media selection row / Playlist */}
+              <div className="flex flex-col gap-2">
+                <span className="text-xs font-bold text-outline uppercase tracking-wider">
+                  Album Khoảnh Khắc
+                </span>
+                <div className="flex gap-3 overflow-x-auto pb-2">
+                  {/* Video Thumbnail Button */}
+                  {selectedMediaArtist.artistVideo && (
+                    <button
+                      onClick={() =>
+                        setActiveMedia({
+                          type: "video",
+                          src: selectedMediaArtist.artistVideo!,
+                        })
+                      }
+                      className={`relative w-20 h-16 rounded-xl overflow-hidden border-2 flex-shrink-0 cursor-pointer transition-all duration-300 ${
+                        activeMedia.type === "video"
+                          ? "border-primary scale-105 shadow-md"
+                          : "border-outline-variant/40 hover:border-primary/50"
+                      }`}
+                    >
+                      <LazyImage
+                        src={selectedMediaArtist.artistAvatar}
+                        alt="Video preview"
+                        className="w-full h-full object-cover opacity-70"
+                        wrapperClassName="w-full h-full"
+                      />
+                      <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+                        <span className="material-symbols-outlined text-white text-2xl">play_circle</span>
+                      </div>
+                    </button>
+                  )}
+
+                  {/* Photo Thumbnail Buttons */}
+                  {selectedMediaArtist.artistPhotos?.map((photo, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() =>
+                        setActiveMedia({
+                          type: "image",
+                          src: photo,
+                        })
+                      }
+                      className={`relative w-20 h-16 rounded-xl overflow-hidden border-2 flex-shrink-0 cursor-pointer transition-all duration-300 ${
+                        activeMedia.type === "image" && activeMedia.src === photo
+                          ? "border-primary scale-105 shadow-md"
+                          : "border-outline-variant/40 hover:border-primary/50"
+                      }`}
+                    >
+                      <LazyImage
+                        src={photo}
+                        alt={`Photo ${idx + 1}`}
+                        className="w-full h-full object-cover"
+                        wrapperClassName="w-full h-full"
+                      />
+                    </button>
+                  ))}
+                </div>
+              </div>
             </div>
-            <h3 className="font-headline text-2xl font-bold text-primary mt-2">
-              {selectedAvatar.name}
-            </h3>
+
+            {/* Right Column: Artist Info & Message Box */}
+            <div className="w-full md:w-2/5 flex flex-col justify-between gap-6 py-2">
+              <div className="space-y-4">
+                <div>
+                  <span className="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-[10px] font-bold shadow-sm uppercase tracking-wider inline-block mb-2">
+                    Họa sĩ nhí
+                  </span>
+                  <h3 className="font-headline text-3xl font-bold text-primary">
+                    {selectedMediaArtist.artistName}
+                  </h3>
+                  <p className="text-xs text-on-surface-variant font-body mt-1">
+                    Sinh năm {selectedMediaArtist.birthYear} • {selectedMediaArtist.location}
+                  </p>
+                </div>
+
+                <div className="border-t border-outline-variant/30 pt-4">
+                  <h4 className="font-headline text-[15px] font-bold text-secondary flex items-center gap-1.5 mb-1.5">
+                    <span className="material-symbols-outlined text-lg">auto_stories</span>
+                    Ước mơ của em
+                  </h4>
+                  <p className="text-sm font-body text-on-surface-variant italic leading-relaxed">
+                    &ldquo;{selectedMediaArtist.dream}&rdquo;
+                  </p>
+                </div>
+              </div>
+
+              {/* Heart Warming Interactive Form */}
+              <div className="bg-primary/5 p-4 rounded-2xl border border-primary/10 flex flex-col gap-3">
+                <h4 className="font-headline text-sm font-bold text-primary flex items-center gap-1.5">
+                  <span className="material-symbols-outlined text-lg">favorite</span>
+                  Gửi lời chúc ấm áp đến em
+                </h4>
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    const form = e.currentTarget;
+                    const formData = new FormData(form);
+                    const text = formData.get("message") as string;
+                    if (text?.trim()) {
+                      alert(`Cảm ơn bạn! Lời động viên ý nghĩa của bạn đã được ghi lại để chuyển tới bé ${selectedMediaArtist.artistName}.`);
+                      form.reset();
+                    }
+                  }}
+                  className="flex flex-col gap-2"
+                >
+                  <textarea
+                    name="message"
+                    placeholder={`Hãy gửi vài lời động viên ngọt ngào tới bé ${selectedMediaArtist.artistName} bạn nhé...`}
+                    className="w-full p-3 text-xs rounded-xl border border-outline-variant bg-white focus:border-primary focus:outline-none resize-none h-18 text-on-surface"
+                    required
+                  />
+                  <button
+                    type="submit"
+                    className="w-full py-2 bg-primary hover:bg-primary-container text-on-primary rounded-xl font-bold text-xs hover:scale-[1.02] active:scale-98 transition-all shadow-sm cursor-pointer text-center"
+                  >
+                    Gửi lời yêu thương
+                  </button>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       )}

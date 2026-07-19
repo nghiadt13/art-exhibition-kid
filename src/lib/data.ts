@@ -16,6 +16,8 @@ export interface Artwork {
   material: string;
   donorCount: number;
   hasDrawing: boolean;
+  artistPhotos?: string[];
+  artistVideo?: string;
 }
 
 export const artworks: Artwork[] = [
@@ -45,6 +47,8 @@ export const artworks: Artwork[] = [
     material: "Sáp màu trên giấy vẽ",
     donorCount: 42,
     hasDrawing: true,
+    artistPhotos: ["/artists/story/artist_1_1.webp","/artists/story/artist_1_2.webp","/artists/story/artist_1_3.webp","/artists/story/artist_1_4.webp","/artists/story/artist_1_5.webp"],
+    artistVideo: "/videos/artist_1_1.mov",
   },
   {
     id: 2,
@@ -71,6 +75,8 @@ export const artworks: Artwork[] = [
     material: "Sáp màu trên giấy vẽ",
     donorCount: 56,
     hasDrawing: true,
+    artistPhotos: ["/artists/story/artist_2_1.webp","/artists/story/artist_2_2.webp"],
+    artistVideo: "/videos/artist_2_1.mov",
   },
   {
     id: 3,
@@ -97,6 +103,8 @@ export const artworks: Artwork[] = [
     material: "Màu nước trên giấy",
     donorCount: 78,
     hasDrawing: true,
+    artistPhotos: ["/artists/story/artist_3_1.webp","/artists/story/artist_3_2.webp","/artists/story/artist_3_3.webp"],
+    artistVideo: "",
   },
   {
     id: 4,
@@ -123,6 +131,8 @@ export const artworks: Artwork[] = [
     material: "Bút màu dạ và sáp dầu",
     donorCount: 88,
     hasDrawing: true,
+    artistPhotos: ["/artworks/artwork_4.webp"],
+    artistVideo: "",
   },
   {
     id: 5,
@@ -150,6 +160,8 @@ export const artworks: Artwork[] = [
     material: "Sáp màu trên giấy vẽ",
     donorCount: 35,
     hasDrawing: true,
+    artistPhotos: ["/artists/story/artist_5_1.webp","/artists/story/artist_5_2.webp","/artists/story/artist_5_3.webp","/artists/story/artist_5_4.webp"],
+    artistVideo: "/videos/artist_5_1.mov",
   },
   {
     id: 6,
@@ -176,6 +188,8 @@ export const artworks: Artwork[] = [
     material: "Bút lông màu nước",
     donorCount: 62,
     hasDrawing: true,
+    artistPhotos: ["/artists/story/artist_6_1.webp","/artists/story/artist_6_2.webp"],
+    artistVideo: "",
   },
   {
     id: 7,
@@ -202,6 +216,8 @@ export const artworks: Artwork[] = [
     material: "Màu nước và sáp dầu",
     donorCount: 94,
     hasDrawing: true,
+    artistPhotos: ["/artworks/artwork_7.webp"],
+    artistVideo: "",
   },
   {
     id: 8,
@@ -228,6 +244,8 @@ export const artworks: Artwork[] = [
     material: "Bút chì màu và sáp dầu",
     donorCount: 110,
     hasDrawing: true,
+    artistPhotos: ["/artists/story/artist_8_1.webp","/artists/story/artist_8_2.webp","/artists/story/artist_8_3.webp"],
+    artistVideo: "/videos/artist_8_1.mov",
   },
   {
     id: 9,
@@ -254,6 +272,8 @@ export const artworks: Artwork[] = [
     material: "Sáp màu và bút lông dạ",
     donorCount: 52,
     hasDrawing: true,
+    artistPhotos: ["/artists/story/artist_9_1.webp","/artists/story/artist_9_3.webp","/artists/story/artist_9_4.webp"],
+    artistVideo: "/videos/artist_9_1.mov",
   },
   {
     id: 10,
@@ -280,6 +300,8 @@ export const artworks: Artwork[] = [
     material: "Sáp màu trên giấy vẽ",
     donorCount: 124,
     hasDrawing: true,
+    artistPhotos: ["/artists/story/artist_10_1.webp","/artists/story/artist_10_2.webp","/artists/story/artist_10_3.webp"],
+    artistVideo: "",
   },
   {
     id: 11,
@@ -303,6 +325,8 @@ export const artworks: Artwork[] = [
     material: "Tranh sáp dầu",
     donorCount: 0,
     hasDrawing: false,
+    artistPhotos: ["/artists/story/artist_11_1.webp","/artists/story/artist_11_2.webp","/artists/story/artist_11_3.webp","/artists/story/artist_11_4.webp"],
+    artistVideo: "/videos/artist_11_1.mov",
   },
   {
     id: 12,
@@ -326,5 +350,7 @@ export const artworks: Artwork[] = [
     material: "Sáp màu trên giấy vẽ",
     donorCount: 0,
     hasDrawing: false,
+    artistPhotos: ["/artists/artist_12.webp"],
+    artistVideo: "",
   },
 ];
