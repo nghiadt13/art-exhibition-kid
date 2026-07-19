@@ -15,9 +15,12 @@ export default function ArtistsView() {
 
   useEffect(() => {
     if (selectedMediaArtist) {
+      const hasVideos = selectedMediaArtist.artistVideos && selectedMediaArtist.artistVideos.length > 0;
       setActiveMedia({
-        type: selectedMediaArtist.artistVideo ? "video" : "image",
-        src: selectedMediaArtist.artistVideo || selectedMediaArtist.artistPhotos?.[0] || selectedMediaArtist.artistAvatar,
+        type: hasVideos ? "video" : "image",
+        src: hasVideos
+          ? selectedMediaArtist.artistVideos![0]
+          : selectedMediaArtist.artistPhotos?.[0] || selectedMediaArtist.artistAvatar,
       });
     } else {
       setActiveMedia(null);
@@ -240,32 +243,36 @@ export default function ArtistsView() {
                   Album Khoảnh Khắc
                 </span>
                 <div className="flex gap-3 overflow-x-auto pb-2">
-                  {/* Video Thumbnail Button */}
-                  {selectedMediaArtist.artistVideo && (
+                  {/* Video Thumbnail Buttons */}
+                  {selectedMediaArtist.artistVideos?.map((videoUrl, idx) => (
                     <button
+                      key={`video-${idx}`}
                       onClick={() =>
                         setActiveMedia({
                           type: "video",
-                          src: selectedMediaArtist.artistVideo!,
+                          src: videoUrl,
                         })
                       }
                       className={`relative w-20 h-16 rounded-xl overflow-hidden border-2 flex-shrink-0 cursor-pointer transition-all duration-300 ${
-                        activeMedia.type === "video"
+                        activeMedia.type === "video" && activeMedia.src === videoUrl
                           ? "border-primary scale-105 shadow-md"
                           : "border-outline-variant/40 hover:border-primary/50"
                       }`}
                     >
                       <LazyImage
                         src={selectedMediaArtist.artistAvatar}
-                        alt="Video preview"
+                        alt={`Video ${idx + 1}`}
                         className="w-full h-full object-cover opacity-70"
                         wrapperClassName="w-full h-full"
                       />
                       <div className="absolute inset-0 flex items-center justify-center bg-black/30">
                         <span className="material-symbols-outlined text-white text-2xl">play_circle</span>
                       </div>
+                      <div className="absolute bottom-1 right-1 bg-black/60 px-1.5 py-0.5 rounded text-[8px] text-white font-bold">
+                        {selectedMediaArtist.artistVideos!.length > 1 ? `Video ${idx + 1}` : "Video"}
+                      </div>
                     </button>
-                  )}
+                  ))}
 
                   {/* Photo Thumbnail Buttons */}
                   {selectedMediaArtist.artistPhotos?.map((photo, idx) => (
