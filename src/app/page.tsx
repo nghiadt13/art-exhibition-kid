@@ -1,10 +1,21 @@
+import TopNavBar from "@/components/top-nav-bar";
+import HeroSection from "@/components/hero-section";
+import AboutSection from "@/components/about-section";
+import BottomMarquee from "@/components/bottom-marquee";
+import Footer from "@/components/footer";
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-8">
-      <h1 className="text-4xl font-bold mb-4">Art Exhibition for Kids</h1>
-      <p className="text-lg text-gray-600 dark:text-gray-400">
-        Welcome to the art exhibition platform!
-      </p>
-    </main>
+    <>
+      <TopNavBar />
+      <main>
+        <HeroSection />
+        <AboutSection />
+        <BottomMarquee />
+      </main>
+      <Footer />
+    </>
   );
 }
+
+
