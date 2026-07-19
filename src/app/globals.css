@@ -136,6 +136,14 @@ body {
   box-shadow: 0 0 0 0 #004883;
   transform: translateY(4px);
 }
+.button-3d-secondary {
+  box-shadow: 0 4px 0 0 #b38f00;
+  transition: all 0.1s ease;
+}
+.button-3d-secondary:active {
+  box-shadow: 0 0 0 0 #b38f00;
+  transform: translateY(4px);
+}
 
 /* Secondary crayon dashed border button */
 .secondary-crayon-btn {

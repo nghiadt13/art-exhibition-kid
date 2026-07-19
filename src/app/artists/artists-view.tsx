@@ -13,6 +13,12 @@ export default function ArtistsView() {
   const [selectedMediaArtist, setSelectedMediaArtist] = useState<Artwork | null>(null);
   const [activeMedia, setActiveMedia] = useState<{ type: "video" | "image"; src: string } | null>(null);
 
+  const getYouTubeThumbnail = (embedUrl: string) => {
+    const match = embedUrl.match(/\/embed\/([^/?]+)/);
+    const videoId = match ? match[1] : null;
+    return videoId ? `https://img.youtube.com/vi/${videoId}/mqdefault.jpg` : null;
+  };
+
   useEffect(() => {
     if (selectedMediaArtist) {
       const hasVideos = selectedMediaArtist.artistVideos && selectedMediaArtist.artistVideos.length > 0;
@@ -133,7 +139,7 @@ export default function ArtistsView() {
 
                   <button
                     onClick={() => setSelectedMediaArtist(art)}
-                    className="flex items-center gap-2 px-5 py-2.5 bg-secondary text-on-secondary rounded-2xl font-bold text-sm hover:scale-105 active:scale-95 transition-all button-3d cursor-pointer shadow-sm w-fit"
+                    className="flex items-center gap-2 px-5 py-2.5 bg-secondary-container text-on-secondary-container rounded-2xl font-bold text-sm hover:scale-[1.03] transition-all cursor-pointer shadow-sm w-fit border-2 border-secondary/20 button-3d-secondary"
                   >
                     <span className="material-symbols-outlined text-lg">play_circle</span>
                     Khoảnh khắc đời thường & Video
@@ -244,35 +250,38 @@ export default function ArtistsView() {
                 </span>
                 <div className="flex gap-3 overflow-x-auto pb-2">
                   {/* Video Thumbnail Buttons */}
-                  {selectedMediaArtist.artistVideos?.map((videoUrl, idx) => (
-                    <button
-                      key={`video-${idx}`}
-                      onClick={() =>
-                        setActiveMedia({
-                          type: "video",
-                          src: videoUrl,
-                        })
-                      }
-                      className={`relative w-20 h-16 rounded-xl overflow-hidden border-2 flex-shrink-0 cursor-pointer transition-all duration-300 ${
-                        activeMedia.type === "video" && activeMedia.src === videoUrl
-                          ? "border-primary scale-105 shadow-md"
-                          : "border-outline-variant/40 hover:border-primary/50"
-                      }`}
-                    >
-                      <LazyImage
-                        src={selectedMediaArtist.artistAvatar}
-                        alt={`Video ${idx + 1}`}
-                        className="w-full h-full object-cover opacity-70"
-                        wrapperClassName="w-full h-full"
-                      />
-                      <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-                        <span className="material-symbols-outlined text-white text-2xl">play_circle</span>
-                      </div>
-                      <div className="absolute bottom-1 right-1 bg-black/60 px-1.5 py-0.5 rounded text-[8px] text-white font-bold">
-                        {selectedMediaArtist.artistVideos!.length > 1 ? `Video ${idx + 1}` : "Video"}
-                      </div>
-                    </button>
-                  ))}
+                  {selectedMediaArtist.artistVideos?.map((videoUrl, idx) => {
+                    const ytThumb = getYouTubeThumbnail(videoUrl) || selectedMediaArtist.artistAvatar;
+                    return (
+                      <button
+                        key={`video-${idx}`}
+                        onClick={() =>
+                          setActiveMedia({
+                            type: "video",
+                            src: videoUrl,
+                          })
+                        }
+                        className={`relative w-20 h-16 rounded-xl overflow-hidden border-2 flex-shrink-0 cursor-pointer transition-all duration-300 ${
+                          activeMedia.type === "video" && activeMedia.src === videoUrl
+                            ? "border-primary scale-105 shadow-md"
+                            : "border-outline-variant/40 hover:border-primary/50"
+                        }`}
+                      >
+                        <LazyImage
+                          src={ytThumb}
+                          alt={`Video ${idx + 1}`}
+                          className="w-full h-full object-cover opacity-75"
+                          wrapperClassName="w-full h-full"
+                        />
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/25">
+                          <span className="material-symbols-outlined text-white text-2xl">play_circle</span>
+                        </div>
+                        <div className="absolute bottom-1 right-1 bg-black/60 px-1.5 py-0.5 rounded text-[8px] text-white font-bold">
+                          {selectedMediaArtist.artistVideos!.length > 1 ? `Video ${idx + 1}` : "Video"}
+                        </div>
+                      </button>
+                    );
+                  })}
 
                   {/* Photo Thumbnail Buttons */}
                   {selectedMediaArtist.artistPhotos?.map((photo, idx) => (
