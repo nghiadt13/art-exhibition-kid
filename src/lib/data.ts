@@ -48,7 +48,7 @@ export const artworks: Artwork[] = [
     donorCount: 42,
     hasDrawing: true,
     artistPhotos: ["/artists/story/artist_1_1.webp","/artists/story/artist_1_2.webp","/artists/story/artist_1_3.webp","/artists/story/artist_1_4.webp","/artists/story/artist_1_5.webp"],
-    artistVideo: "/videos/artist_1_1.mov",
+    artistVideo: "https://www.youtube.com/embed/FHQZMT1I634",
   },
   {
     id: 2,
@@ -76,7 +76,7 @@ export const artworks: Artwork[] = [
     donorCount: 56,
     hasDrawing: true,
     artistPhotos: ["/artists/story/artist_2_1.webp","/artists/story/artist_2_2.webp"],
-    artistVideo: "/videos/artist_2_1.mov",
+    artistVideo: "https://www.youtube.com/embed/pzTLnGzDi6s",
   },
   {
     id: 3,
@@ -104,7 +104,7 @@ export const artworks: Artwork[] = [
     donorCount: 78,
     hasDrawing: true,
     artistPhotos: ["/artists/story/artist_3_1.webp","/artists/story/artist_3_2.webp","/artists/story/artist_3_3.webp"],
-    artistVideo: "",
+    artistVideo: "https://www.youtube.com/embed/kQC8PRGbznM",
   },
   {
     id: 4,
@@ -161,7 +161,7 @@ export const artworks: Artwork[] = [
     donorCount: 35,
     hasDrawing: true,
     artistPhotos: ["/artists/story/artist_5_1.webp","/artists/story/artist_5_2.webp","/artists/story/artist_5_3.webp","/artists/story/artist_5_4.webp"],
-    artistVideo: "/videos/artist_5_1.mov",
+    artistVideo: "https://www.youtube.com/embed/4SIydzYv0X4",
   },
   {
     id: 6,
@@ -189,7 +189,7 @@ export const artworks: Artwork[] = [
     donorCount: 62,
     hasDrawing: true,
     artistPhotos: ["/artists/story/artist_6_1.webp","/artists/story/artist_6_2.webp"],
-    artistVideo: "",
+    artistVideo: "https://www.youtube.com/embed/CMGcmXsiHXw",
   },
   {
     id: 7,
@@ -245,7 +245,7 @@ export const artworks: Artwork[] = [
     donorCount: 110,
     hasDrawing: true,
     artistPhotos: ["/artists/story/artist_8_1.webp","/artists/story/artist_8_2.webp","/artists/story/artist_8_3.webp"],
-    artistVideo: "/videos/artist_8_1.mov",
+    artistVideo: "https://www.youtube.com/embed/fDkMLDEq-Sw",
   },
   {
     id: 9,
@@ -273,7 +273,7 @@ export const artworks: Artwork[] = [
     donorCount: 52,
     hasDrawing: true,
     artistPhotos: ["/artists/story/artist_9_1.webp","/artists/story/artist_9_3.webp","/artists/story/artist_9_4.webp"],
-    artistVideo: "/videos/artist_9_1.mov",
+    artistVideo: "https://www.youtube.com/embed/4cPsMWgtJyQ",
   },
   {
     id: 10,
@@ -301,7 +301,7 @@ export const artworks: Artwork[] = [
     donorCount: 124,
     hasDrawing: true,
     artistPhotos: ["/artists/story/artist_10_1.webp","/artists/story/artist_10_2.webp","/artists/story/artist_10_3.webp"],
-    artistVideo: "",
+    artistVideo: "https://www.youtube.com/embed/MueySg7yHLY",
   },
   {
     id: 11,
@@ -326,7 +326,7 @@ export const artworks: Artwork[] = [
     donorCount: 0,
     hasDrawing: false,
     artistPhotos: ["/artists/story/artist_11_1.webp","/artists/story/artist_11_2.webp","/artists/story/artist_11_3.webp","/artists/story/artist_11_4.webp"],
-    artistVideo: "/videos/artist_11_1.mov",
+    artistVideo: "https://www.youtube.com/embed/BjsroAdx-Ps",
   },
   {
     id: 12,
@@ -351,6 +351,6 @@ export const artworks: Artwork[] = [
     donorCount: 0,
     hasDrawing: false,
     artistPhotos: ["/artists/artist_12.webp"],
-    artistVideo: "",
+    artistVideo: "https://www.youtube.com/embed/RYY-n0_PcJc",
   },
 ];
