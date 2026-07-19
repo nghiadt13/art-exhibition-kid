@@ -63,6 +63,7 @@
   --radius-xl: 0.75rem;
   --radius-full: 9999px;
 
+  --font-sans: var(--font-headline-custom), "Playpen Sans", cursive;
   --font-body: var(--font-headline-custom), "Playpen Sans", cursive;
   --font-headline: var(--font-headline-custom), "Playpen Sans", cursive;
   --font-display: var(--font-headline-custom), "Playpen Sans", cursive;
