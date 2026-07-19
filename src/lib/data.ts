@@ -161,7 +161,7 @@ export const artworks: Artwork[] = [
     donorCount: 35,
     hasDrawing: true,
     artistPhotos: ["/artists/story/artist_5_1.webp","/artists/story/artist_5_2.webp","/artists/story/artist_5_3.webp","/artists/story/artist_5_4.webp"],
-    artistVideos: ["https://www.youtube.com/embed/4SIydzYv0X4","https://www.youtube.com/embed/CMGcmXsiHXw"],
+    artistVideos: ["https://www.youtube.com/embed/4SIydzYv0X4"],
   },
   {
     id: 6,
