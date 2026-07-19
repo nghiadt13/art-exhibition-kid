@@ -76,7 +76,7 @@ export const artworks: Artwork[] = [
     donorCount: 56,
     hasDrawing: true,
     artistPhotos: ["/artists/story/artist_2_1.webp","/artists/story/artist_2_2.webp"],
-    artistVideos: ["https://www.youtube.com/embed/pzTLnGzDi6s"],
+    artistVideos: ["https://www.youtube.com/embed/pzTLnGzDi6s","https://www.youtube.com/embed/EzuBss7m3A4"],
   },
   {
     id: 3,
@@ -161,7 +161,7 @@ export const artworks: Artwork[] = [
     donorCount: 35,
     hasDrawing: true,
     artistPhotos: ["/artists/story/artist_5_1.webp","/artists/story/artist_5_2.webp","/artists/story/artist_5_3.webp","/artists/story/artist_5_4.webp"],
-    artistVideos: ["https://www.youtube.com/embed/4SIydzYv0X4"],
+    artistVideos: ["https://www.youtube.com/embed/4SIydzYv0X4","https://www.youtube.com/embed/CMGcmXsiHXw"],
   },
   {
     id: 6,
@@ -189,7 +189,7 @@ export const artworks: Artwork[] = [
     donorCount: 62,
     hasDrawing: true,
     artistPhotos: ["/artists/story/artist_6_1.webp","/artists/story/artist_6_2.webp"],
-    artistVideos: ["https://www.youtube.com/embed/CMGcmXsiHXw"],
+    artistVideos: ["https://www.youtube.com/embed/CMGcmXsiHXw","https://www.youtube.com/embed/MDAdBkbYc2I"],
   },
   {
     id: 7,
@@ -245,7 +245,7 @@ export const artworks: Artwork[] = [
     donorCount: 110,
     hasDrawing: true,
     artistPhotos: ["/artists/story/artist_8_1.webp","/artists/story/artist_8_2.webp","/artists/story/artist_8_3.webp"],
-    artistVideos: ["https://www.youtube.com/embed/fDkMLDEq-Sw"],
+    artistVideos: ["https://www.youtube.com/embed/fDkMLDEq-Sw","https://www.youtube.com/embed/GOaBJnfC5qg"],
   },
   {
     id: 9,
@@ -273,7 +273,7 @@ export const artworks: Artwork[] = [
     donorCount: 52,
     hasDrawing: true,
     artistPhotos: ["/artists/story/artist_9_1.webp","/artists/story/artist_9_3.webp","/artists/story/artist_9_4.webp"],
-    artistVideos: ["https://www.youtube.com/embed/4cPsMWgtJyQ"],
+    artistVideos: ["https://www.youtube.com/embed/4cPsMWgtJyQ","https://www.youtube.com/embed/vJWLuCv_6Ek","https://www.youtube.com/embed/V-2Fo73u94k"],
   },
   {
     id: 10,
@@ -301,7 +301,7 @@ export const artworks: Artwork[] = [
     donorCount: 124,
     hasDrawing: true,
     artistPhotos: ["/artists/story/artist_10_1.webp","/artists/story/artist_10_2.webp","/artists/story/artist_10_3.webp"],
-    artistVideos: ["https://www.youtube.com/embed/MueySg7yHLY"],
+    artistVideos: ["https://www.youtube.com/embed/MueySg7yHLY","https://www.youtube.com/embed/ub4razwtMwY","https://www.youtube.com/embed/MDAdBkbYc2I"],
   },
   {
     id: 11,
@@ -326,7 +326,7 @@ export const artworks: Artwork[] = [
     donorCount: 0,
     hasDrawing: false,
     artistPhotos: ["/artists/story/artist_11_1.webp","/artists/story/artist_11_2.webp","/artists/story/artist_11_3.webp","/artists/story/artist_11_4.webp"],
-    artistVideos: ["https://www.youtube.com/embed/BjsroAdx-Ps"],
+    artistVideos: ["https://www.youtube.com/embed/BjsroAdx-Ps","https://www.youtube.com/embed/kQC8PRGbznM"],
   },
   {
     id: 12,
@@ -351,6 +351,6 @@ export const artworks: Artwork[] = [
     donorCount: 0,
     hasDrawing: false,
     artistPhotos: ["/artists/artist_12.webp"],
-    artistVideos: ["https://www.youtube.com/embed/RYY-n0_PcJc"],
+    artistVideos: ["https://www.youtube.com/embed/RYY-n0_PcJc","https://www.youtube.com/embed/UKc6qzu2_W0"],
   },
 ];
